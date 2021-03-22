@@ -1,9 +1,26 @@
+html {
+    scroll-behavior: smooth;
+  }
+/* montserrat-regular - latin */
+/* montserrat-regular - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/montserrat-v15-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/montserrat-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/montserrat-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/montserrat-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/montserrat-v15-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }  
 *:focus {
     outline: none;
 }
 
 body {
-    font-family: Helvetica, Sans-Serif;
+    font-family: "Montserrat" , Sans-Serif;
     background-color: white;
     margin: 0;
 }
@@ -23,7 +40,7 @@ header {
 
 .buttons {
     padding: 1em;
-    border-radius: 45px;
+    /* border-radius: 45px; */
     background-color: black;
     border: transparent;
     color: white;
@@ -43,18 +60,19 @@ div {
     display: inline;
 }
 
-.block {
+.block--buttons--right {
     position: absolute;
-    right: 5%;
+    right: 10%;
     top: 0.9em;
-    /* height: 100%; */
+}
+.header--logo--container{
+    display: flex;
+    justify-content: center;
 }
 
 .header--logo {
     position: absolute;
-    display: flex;
     width: 5em;
-    margin-left: 45%;
 }
 
 .button--left {
@@ -62,6 +80,22 @@ div {
     left: 10%;
 }
 
+.button--middle {
+    text-decoration: none;
+    color: darkgrey;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    padding-right: 6em;
+    padding-left: 6em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    width: auto;
+    height: 1.3em;
+    font-size: 1.4em;
+    border-radius: 45px;
+    top: -5em;
+}
 .buttons:hover {
     background-color: white;
     color: black;
@@ -73,6 +107,13 @@ div {
     box-shadow: inset 0 0 10px #aaaaaa;
 }
 
+
+
+.button--middle:hover {
+    color: white;
+    background-color: #000000;
+    box-shadow: 0px 15px 20px #5da1d59d;
+}
 main {
     width: 100%;
     display: flex;
@@ -83,9 +124,9 @@ main {
 
 .image--slides {
     width: 100%;
-    height: 500px;
+    /* height: 500px;
     margin-top: 2.5%;
-    padding: 1.5em;
+    padding: 1.5em; */
 }
 
 .image-in-slide {
@@ -93,33 +134,15 @@ main {
     height: 100%;
 }
 
-.button--middle {
-    text-decoration: none;
-    color: darkgrey;
-    background-color: white;
-    position: absolute;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    padding-right: 2em;
-    padding-left: 2em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    width: auto;
-    height: 1.3em;
-    font-size: 1.5em;
-    border-radius: 45px;
-    margin-left: -4%;
-    top: 80%;
+.over--image--slides{
+    display: flex;
+    justify-content: center;
 }
 
-.button--middle:hover {
-    color: white;
-    background-color: #99ccf4;
-    box-shadow: 0px 15px 20px #5da2d5;
-}
 
 #learning--plans {
     width: 100%;
-    padding: 2em;
+    padding: 4em 2.5em 10em 2.5em;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -145,6 +168,8 @@ h2 {
     padding: 0.5em;
     font-weight: bolder;
 }
+
+
 
 section div {
     width: 100%;
@@ -198,17 +223,67 @@ footer {
     margin-top: 1.5em;
 }
 
-footer div ul li {
-    margin-top: 0.5em
-}
-
-footer div ul,
-footer div {
+.footer--contact{
+    margin-top: 3em;
     color: black;
-    font-size: 0.9em;
-    margin-top: 1.5em;
+    font-weight: bold;
+    font-size: 1em;
 }
-
+.contact--list{
+    margin-top: 1.5em;
+    font-size: 0.8em;
+    margin-left: -15%; 
+    list-style-type: none;
+    
+}
 .footer-code {
     color: black;
 }
+.project{
+    background-color: black;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+}
+h5 {
+    position: relative;
+    color: grey;
+    font-weight: normal;
+    top: -0.7em;
+}
+
+.to-top{
+    color:rgb(0, 0, 0);
+    padding-top:1.8em;
+    display:inline-block;/* or block */
+    position:absolute;
+    position: fixed;
+    left: 90%;
+    bottom: 2.5em;
+    border-color:rgb(0, 0, 0);
+    text-decoration:none;
+    transition:all .3s ease-out;
+  }
+  .to-top:before{
+    text-align:center;
+    content:'▲';
+    font-size:0.9em;
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-0.7em;
+    border:solid .13em white;
+    border-radius:10em;
+    width:1.4em;
+    height:1.4em;
+    line-height:1.3em;
+    border-color:inherit;
+    transition:transform 0.5s ease-in;
+  }
+  .to-top:hover{
+    color:#F78888;
+    border-color:#F78888;
+  }
+  .to-top:hover:before{
+    transform: rotate(360deg);
+  }
