@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
   }
 /* montserrat-regular - latin */
-/* montserrat-regular - latin */
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
@@ -27,7 +26,7 @@ body {
 
 header {
     position: sticky;
-    background-color: black;
+    background-color: #0e0e0e;
     border: none;
     padding: 0px;
     width: 100%;
@@ -41,7 +40,7 @@ header {
 .buttons {
     padding: 1em;
     /* border-radius: 45px; */
-    background-color: black;
+    background-color: #0e0e0e;
     border: transparent;
     color: white;
     padding-right: 1em;
@@ -82,7 +81,7 @@ div {
 
 .button--middle {
     text-decoration: none;
-    color: darkgrey;
+    color: #f78888;
     background-color: white;
     position: relative;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -97,7 +96,7 @@ div {
     top: -5em;
 }
 .buttons:hover {
-    background-color: white;
+    background-color: #f78888;
     color: black;
 }
 
@@ -112,7 +111,7 @@ div {
 .button--middle:hover {
     color: white;
     background-color: #000000;
-    box-shadow: 0px 15px 20px #5da1d59d;
+    box-shadow: 0px 10px 15px #f78888a6;
 }
 main {
     width: 100%;
@@ -248,8 +247,9 @@ footer {
 h5 {
     position: relative;
     color: grey;
-    font-weight: normal;
+    font-weight: bold;
     top: -0.7em;
+    opacity: 65%;
 }
 
 .to-top{
@@ -287,3 +287,6 @@ h5 {
   .to-top:hover:before{
     transform: rotate(360deg);
   }
+
+
+  
