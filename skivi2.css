@@ -1,5 +1,7 @@
 html {
     scroll-behavior: smooth;
+    --scrollbarBG: #4e4e4e;
+    --thumbBG: #000000;
   }
 /* montserrat-regular - latin */
 @font-face {
@@ -23,13 +25,30 @@ body {
     background-color: white;
     margin: 0;
 }
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
 
 header {
     position: sticky;
     background-color: #0e0e0e;
-    border: none;
+    /* border: none; */
+    border: 2px solid #0e0e0e;
+    border-bottom-color: #f78888;
     padding: 0px;
-    width: 100%;
+    width: 99.75%;
     height: 3.05em;
     top: 0;
     left: 0;
