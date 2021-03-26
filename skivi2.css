@@ -221,10 +221,10 @@ section div {
 
 footer {
     background-image: url("img/footer-model.png");
-    border: 3px solid black;
+    border: 2px solid black;
     border-top-color: #f78888;
     padding: 0px;
-    width: 100%;
+    width: 99.75%;
     height: 160px;
     top: 0;
     left: 0;
@@ -240,15 +240,17 @@ footer {
     font-size: 1em;
     font-weight: bolder;
 }
-
+.mail--creators{
+    display: flex;
+    justify-content: center;
+}
 .contact--list {
     margin-top: 0.6em;
     font-size: 0.8em;
-    margin-left: -15%;
+    /* margin-left: -15%; */
     color: white;
     list-style-type: none;
 }
-
 .footer--sourcecode {
     margin-top: 0.5em;
     color: white;
@@ -256,6 +258,7 @@ footer {
 
 .footer-code {
     color: #f78888;
+    text-decoration: none;
 }
 
 .project {
