@@ -67,14 +67,12 @@ header {
 
 .buttons {
     padding: 1em;
-    /* border-radius: 45px; */
     background-color: #0e0e0e;
     border: transparent;
     color: white;
     padding-right: 1em;
     padding-left: 1em;
     width: auto;
-    /* height: 100%; */
     text-align: center;
     font-weight: bold;
     font-size: 0.9em;
@@ -88,14 +86,55 @@ div {
 }
 
 .block--buttons--right {
-    position: absolute;
-    right: 10%;
+    position: relative;
     top: 0.9em;
 }
 
 .button--left {
     position: relative;
     left: 10%;
+}
+
+.dropbtn {
+    height: 2.5em;
+    width: 2.5em;
+    cursor: pointer;
+    display: none;
+    /* position: absolute; */
+}
+
+.dropdown {
+    display: inline;
+    position: absolute;
+    height: 3.05em;
+    right: 10%;
+    /* top: 0.9em; */
+}
+
+@media only screen and (max-width:800px) {
+    .dropbtn {
+        display: block;
+        position: relative;
+        top: 0.25em;
+    }
+    .dropdown {
+        position: absolute;
+        display: inline-flex;
+    }
+    .dropdown--content {
+        right: 5%;
+        display: none;
+        position: absolute;
+        height: 5em;
+        z-index: 1;
+    }
+    .dropdown--content a {
+        width: 100%;
+    }
+    .show {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .button--middle {
@@ -240,10 +279,12 @@ footer {
     font-size: 1em;
     font-weight: bolder;
 }
-.mail--creators{
+
+.mail--creators {
     display: flex;
     justify-content: center;
 }
+
 .contact--list {
     margin-top: 0.6em;
     font-size: 0.8em;
@@ -251,6 +292,7 @@ footer {
     color: white;
     list-style-type: none;
 }
+
 .footer--sourcecode {
     margin-top: 0.5em;
     color: white;
