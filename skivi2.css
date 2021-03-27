@@ -56,8 +56,10 @@ header {
     /* border: none; */
     border: 2px solid #0e0e0e;
     border-bottom-color: #f78888;
+    border-right: none;
+    border-left: none;
     padding: 0px;
-    width: 99.75%;
+    width: 100%;
     height: 3.05em;
     top: 0;
     left: 0;
@@ -109,32 +111,6 @@ div {
     /* top: 0.9em; */
 }
 
-@media only screen and (max-width:800px) {
-    .dropbtn {
-        display: block;
-        position: relative;
-        top: 0.25em;
-    }
-    .dropdown {
-        position: absolute;
-        display: inline-flex;
-    }
-    .dropdown--content {
-        right: 5%;
-        top: 3.2em;
-        display: none;
-        position: absolute;
-        height: 5em;
-        z-index: 1;
-    }
-    .dropdown--content a {
-        width: 100%;
-    }
-    .show {
-        display: flex;
-        flex-direction: column;
-    }
-}
 
 .button--middle {
     text-decoration: none;
@@ -152,7 +128,6 @@ div {
     border-radius: 45px;
     top: -5em;
 }
-
 .buttons:hover {
     background-color: #f78888;
     color: black;
@@ -197,7 +172,7 @@ main {
 
 #learning--plans {
     width: 100%;
-    padding: 4em 1em 10em 1em;
+    padding: 4em 0em 10em 0em;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -259,10 +234,13 @@ section div {
 
 footer {
     background-image: url("img/footer-model.png");
-    border: 2px solid black;
+    border: 2px solid #0e0e0e;
     border-top-color: #f78888;
     padding: 0px;
-    width: 99.75%;
+    width: 100%;
+    border-right: none;
+    border-left:none;
+    border-bottom:none;
     height: 160px;
     top: 0;
     left: 0;
@@ -356,4 +334,46 @@ h5 {
 
 .to-top:hover:before {
     transform: rotate(360deg);
+}
+@media only screen and (max-width:800px) {
+    .dropbtn {
+        display: block;
+        position: relative;
+        top: 0.25em;
+    }
+    .dropdown {
+        position: absolute;
+        display: inline-flex;
+    }
+    .dropdown--content {
+        right: 5%;
+        top: 3.2em;
+        display: none;
+        position: absolute;
+        height: 5em;
+        z-index: 1;
+    }
+    .dropdown--content a {
+        width: 100%;
+    }
+    .show {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:750px){
+    .button--middle{
+        font-size: 1em;
+    }
+    .to-top{
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width:450px){
+    .button--middle{
+        font-size: 0.8em;
+    }
+    .to-top{
+        display: none;
+    }
 }
