@@ -1,5 +1,6 @@
 main {
     width: 100%;
+    background-image: url("img/login-bg.png");
 }
 
 .title {
@@ -15,79 +16,86 @@ main {
 }
 
 .course--description--image {
+    background-color: white;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
     margin-top: 2em;
+    padding-left: 2em;
     margin-bottom: 2em;
 }
 
-img {
+.course--img {
+    padding: 2em;
     width: 15em;
     height: 10em;
 }
 
 .course--description {
     margin-left: 2em;
-    width: 50em;
-    height: 10em;
+    width: auto;
+    height: auto;
+    padding: 1em;
 }
 
 .course--content--needs {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
+    padding-left: 1em;
     margin-bottom: 2em;
+    width: 90%;
 }
 
 .course--content {
-    width: 35em;
+    background-color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 30em;
     height: 10em;
 }
 
 .course--needs {
-    width: 35em;
+    background-color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 30em;
     height: 10em;
 }
 
-.course1 {
-    width: auto;
-    height: 350px;
+.courses {
+    /* border: 2px solid black; */
+    width: 90%;
 }
 
-
-/* .dropdown {
-    border: 2px solid black;
-} */
-
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-left: auto;
+.dropbtn--course {
+    background-color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    left: 0;
+    margin-bottom: 1em;
 }
 
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+.down-arrow {
+    width: 1.5em;
+    height: 1em;
+    position: absolute;
+    align-self: center;
+    right: 5%;
 }
 
-.course--video {
-    /* display: none; */
-    visibility: hidden;
-    opacity: 0;
+.dropdown--course {
+    display: none;
 }
 
-.dropdown:active+.course--video {
-    /* display: block; */
-    visibility: visible;
-    opacity: 1;
+.show {
+    display: inline;
 }
 
-
-/* @media screen and (max-width:400px) {
-    .course--description {
-        width: auto;
+@media screen and (max-width:800px) {
+    .course--description--image {
+        flex-wrap: wrap;
     }
-} */
+}
