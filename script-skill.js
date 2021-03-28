@@ -1,5 +1,21 @@
-function drop() {
+function drop1() {
     document.getElementById("course--dropdown").classList.toggle("show");
+}
+
+function drop2() {
+    document.getElementById("course--dropdown2").classList.toggle("show");
+}
+
+function drop3() {
+    document.getElementById("course--dropdown3").classList.toggle("show");
+}
+
+function drop4() {
+    document.getElementById("course--dropdown4").classList.toggle("show");
+}
+
+function drop5() {
+    document.getElementById("course--dropdown5").classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
