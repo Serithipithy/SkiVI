@@ -103,6 +103,41 @@ iframe {
     margin-bottom: 1em;
 }
 
+.course--txt {
+    background-color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    font-weight: bolder;
+    width: 60%;
+}
+
+.btn--done {
+    color: black;
+    background-color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 1.5em;
+    border-radius: 45px;
+    padding-left: 2.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 2.5em;
+    /* margin-bottom: 1em; */
+    position: relative;
+    left: 70%;
+    bottom: 3em;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+    box-shadow: 0px 8px 15px #f78888a6;
+}
+
+.to-top {
+    z-index: 2;
+}
+
 @media screen and (max-width:800px) {
     .course--details {
         justify-content: center;
@@ -125,6 +160,11 @@ iframe {
     .course--needs {
         width: auto;
         height: auto;
+    }
+    .btn--done {
+        left: 5%;
+        bottom: 0;
+        margin-bottom: 1em;
     }
 }
 
