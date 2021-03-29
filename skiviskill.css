@@ -97,6 +97,12 @@ main {
     display: inline;
 }
 
+iframe {
+    width: 90%;
+    height: 450px;
+    margin-bottom: 1em;
+}
+
 @media screen and (max-width:800px) {
     .course--details {
         justify-content: center;
@@ -119,5 +125,11 @@ main {
     .course--needs {
         width: auto;
         height: auto;
+    }
+}
+
+@media screen and (max-width:450px) {
+    iframe {
+        height: 200px;
     }
 }
