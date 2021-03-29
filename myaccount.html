@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="skivi2.css">
+    <link rel="stylesheet" href="skivimyaccount.css">
+    <script src="script.js"></script>
+    <title>SkiVi | My account</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="#contact" class="buttons button--left">Contact</a>
+            <div class="dropdown">
+                <div id="myDropdown" class=" dropdown--content block--buttons--right">
+                    <a href="https://www.youtube.com/watch?v=EIn3808tTck" class="buttons button--right">Learn</a>
+                    <a href="signup.html" class="buttons button--right">Sign Up</a>
+                    <a href="login.html" class="buttons button--right">Log In</a>
+                </div>
+                <img onclick="myFunction()" class="dropbtn " src="img/menu.png" alt="menu button">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="myaccount--banner">
+           <h1 class="myaccount--banner--dimensioning">My Account</h1>
+           <h4 class="myaccount--banner--dimensioning">your account settings and change your password here</h4>
+        </section>
+
+        <section class="account--container">
+            <div class="account--profile">
+                <img src="img/profile-picture.jpg" alt="profile picture" class="profile--picture">
+                <p class="account--username">YourUsername</p>
+            </div>
+            <form>
+                <p class="account--mail">Youremailhere@gmail.com</p>
+                <input type="text" placeholder="New username...">
+                <input type="password" placeholder="Change password...">
+                <input type="password" placeholder="Confirm password...">
+                <button type="submit">Save changes</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer--contact">
+            <div class="mail--creators"> Contact creators </div>
+            <div class="contact--list">
+                <p class="mail--creators">Mosoiu Alexandra : alexandramosoiu19@gmail.com</p>
+                <p class="mail--creators">Iordan Cosmina: cosmina.iordan03@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer--contact footer--sourcecode">
+            Source-Code: <a class="footer-code" href="https://github.com/Serithipithy/SkiVI-Skill-Virtual-Instructor-">GitHub</a>
+        </div>
+    </footer>
+    <section class="project">
+        <h5>Web Tehnologies project | 2021</h5>
+    </section>
+    
+</body>
+</html>
