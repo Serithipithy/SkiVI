@@ -27,12 +27,12 @@
     <main>
         <section class="myaccount--banner">
            <h1 class="myaccount--banner--dimensioning">My Account</h1>
-           <h4 class="myaccount--banner--dimensioning">your account settings and change your password here</h4>
+           <h4 class="myaccount--banner--dimensioning">Edit your account settings and change your password here</h4>
         </section>
 
-        <section class="account--container">
+        <div class="account--container">
             <div class="account--profile">
-                <img src="img/profile-picture.jpg" alt="profile picture" class="profile--picture">
+                <img src="img/profile-picture.jpg" alt="profile picture" class="profile--picture"/>
                 <p class="account--username">YourUsername</p>
             </div>
             <form>
@@ -42,6 +42,58 @@
                 <input type="password" placeholder="Confirm password...">
                 <button type="submit">Save changes</button>
             </form>
+        </div>
+
+        <section class="account-skills">
+            <span>My Skills</span>
+            <div class="skill--stats">
+                <div class="skill--container">
+                    <h2>First aid</h2>
+                    <div class="progress--status">
+                        <p>Progress</p>
+                        <progress id="file1" max="100" value="70">70%</progress>
+                    </div>
+                    <div class="last---watched">
+                        <p>Last video watched: </p> <a href="https://www.youtube.com/watch?v=bSqHJaGyC_A" class="link">Title last video watched</a>
+                    </div>
+                    <img src="img/play-button.png" alt="play" class="play-pause--button"/>
+                    <img src="img/pause-button.png" alt="play" class="play-pause--button"/>
+                </div>
+                <img src="img/skill1.jpg" alt="skill 1 imagine" class="skill--image"/>
+            </div>
+
+            <div class="skill--stats">
+                <div class="skill--container">
+                    <h2>Wine tasting</h2>
+                    <div class="progress--status">
+                        <p>Progress</p>
+                        <progress id="file2" max="100" value="38">38%</progress>
+                    </div>
+                    <div class="last---watched">
+                        <p>Last video watched: </p> <a href="https://www.youtube.com/watch?v=bSqHJaGyC_A" class="link">Title last video watched</a>
+                    </div>
+                    <img src="img/play-button.png" alt="play" class="play-pause--button"/>
+                    <img src="img/pause-button.png" alt="play" class="play-pause--button"/>
+                </div>
+                <img src="img/skill2.jpg" alt="skill 1 imagine" class="skill--image"/>
+            </div>
+
+            <div class="skill--stats">
+                <div class="skill--container">
+                    <h2>Flight attendant</h2>
+                    <div class="progress--status">
+                        <p>Progress</p>
+                        <progress id="file3" max="100" value="91">91%</progress>
+                    </div>
+                    <div class="last---watched">
+                        <p>Last video watched: </p> <a href="https://www.youtube.com/watch?v=bSqHJaGyC_A" class="link">Title last video watched</a>
+                    </div>
+                    <img src="img/play-button.png" alt="play" class="play-pause--button"/>
+                    <img src="img/pause-button.png" alt="play" class="play-pause--button"/>
+                </div>
+                <img src="img/skill3.jpg" alt="skill 1 imagine" class="skill--image"/>
+            </div>
+
         </section>
     </main>
 

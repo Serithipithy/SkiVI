@@ -1,8 +1,11 @@
 .myaccount--banner{
+    /* margin-top: -3%; */
     width: 100%;
-    background-color: #0e0e0e;
+    height: 10em;
+    background-color: #161414;
     color: white;
     text-align: left;
+    display: flexbox;
 }
 .myaccount--banner--dimensioning{
     padding-left: 11%;
@@ -25,8 +28,9 @@ h4{
     align-content: center;
     /* justify-content:space-between; */
     list-style: none;
-    border-bottom: 1px solid #f78888;
-    height: 15em;
+    border-bottom: 2px solid #f78888;
+    /* box-shadow: 0px 2px 17px -10px #f78888; */
+    height: 18em;
 }
 .profile--picture{
     width: 10em;
@@ -41,6 +45,7 @@ h4{
 }
 
 .account--username{
+    display: block;
     position: relative;
     text-align: center;
     color: #e96a6a;
@@ -48,7 +53,7 @@ h4{
 }
 form{
     margin-left: 10%;
-    margin-top: -1em;
+    margin-top:-0.6em;
     width: 20em;
     height: 26.5625em;
 }
@@ -75,11 +80,102 @@ button{
     border-radius:3px ;
     font-weight: bolder;
     color: whitesmoke;
+    cursor: pointer;
 }
 
 .account--mail{
     color: #e96a6a;
+    display: block;
     font-weight: bolder;
     padding-top: 0.5em;
     margin-bottom: 0em;
+}
+
+span{
+    padding: 1.5em 1em 1.5em 1em;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(99, 99, 99);
+    display: flex;
+    justify-content: center;
+}
+section div{
+    display: block;
+}
+.account-skills{
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #f78888;
+
+}
+
+section div h2{
+    font-weight: bolder;
+    color: rgb(139, 139, 139);
+    font-size: 1.5em;
+    padding: 0;
+    margin-bottom: 1.3em;
+}
+p{
+    font-weight: bolder;
+    color: rgb(139, 139, 139);
+    display: inline;
+}
+.progress--status{
+    padding-bottom: 1.5em;
+}
+.play-pause--button{
+    height: 1.5em;
+    margin-right: 1em;
+}
+.skill--stats{
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+.skill--container{
+    padding: 1.5em 1.5em 1.5em 2em;
+    width: 34em;
+    height: 11em;
+    background-color: rgba(211, 211, 211, 0.342);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.233);
+}
+
+progress {
+    margin-left: 3em;
+    width: 20em;
+    height: 0.8em;
+    border-radius: 10px;
+
+  }
+  progress::-webkit-progress-bar {
+    background-color: rgba(136, 136, 136, 0.144);
+    border-radius: 10px;
+  }
+  progress::-webkit-progress-value {
+    background-color: #f78888;
+    border-radius: 10px;
+
+  }
+  progress::-moz-progress-bar {
+    background-color: #f78888;
+    border-radius: 10px;
+  }
+
+.last---watched{
+    padding-bottom: 1.5em;
+}
+.link{
+    margin-left: 2em;
+    color: #f78888;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}  
+
+.skill--image{
+    padding: 0;
+    height: 15em;
+    width: 22em;
 }
