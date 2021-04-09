@@ -111,7 +111,6 @@ div {
     /* top: 0.9em; */
 }
 
-
 .button--middle {
     text-decoration: none;
     color: #f78888;
@@ -128,6 +127,7 @@ div {
     border-radius: 45px;
     top: -5em;
 }
+
 .buttons:hover {
     background-color: #f78888;
     color: black;
@@ -239,8 +239,8 @@ footer {
     padding: 0px;
     width: 100%;
     border-right: none;
-    border-left:none;
-    border-bottom:none;
+    border-left: none;
+    border-bottom: none;
     height: 160px;
     top: 0;
     left: 0;
@@ -335,6 +335,7 @@ h5 {
 .to-top:hover:before {
     transform: rotate(360deg);
 }
+
 @media only screen and (max-width:800px) {
     .dropbtn {
         display: block;
@@ -346,34 +347,51 @@ h5 {
         display: inline-flex;
     }
     .dropdown--content {
-        right: 5%;
+        right: -5.4em;
         top: 3.2em;
         display: none;
         position: absolute;
-        height: 5em;
+        /* height: 5em; */
         z-index: 1;
     }
     .dropdown--content a {
-        width: 100%;
+        width: 82%;
     }
     .show {
         display: flex;
         flex-direction: column;
+        width: 10em;
+        height: 100vh;
+        background-color: #0e0e0e;
     }
 }
-@media only screen and (max-width:750px){
-    .button--middle{
+
+@media only screen and (max-width:750px) {
+    .button--middle {
         font-size: 1em;
     }
-    .to-top{
+    .to-top {
         font-size: 0.8em;
     }
 }
-@media only screen and (max-width:450px){
-    .button--middle{
+
+@media only screen and (max-width:560px) {
+    .dropdown--content {
+        right: -3.4em;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .button--middle {
         font-size: 0.8em;
     }
-    .to-top{
+    .to-top {
         display: none;
+    }
+}
+
+@media only screen and (max-width:380px) {
+    .dropdown--content {
+        right: -2.4em;
     }
 }
