@@ -6,26 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="skivi2.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="header.css">
     <title>SkiVi | Home</title>
 </head>
 
 <body>
     <header>
-        <div>
-            <a href="#contact" class="buttons button--left">Contact</a>
-            <div class="dropdown">
-                <div id="myDropdown" class=" dropdown--content block--buttons--right">
-                    <a href="https://www.youtube.com/watch?v=EIn3808tTck" class="buttons button--right">Learn</a>
-                    <a href="signup.html" class="buttons button--right">Sign Up</a>
-                    <a href="login.html" class="buttons button--right">Log In</a>
-                </div>
-                <img onclick="myFunction()" class="dropbtn " src="img/menu.png" alt="menu button">
-            </div>
-        </div>
+            <nav>
+                <ul>
+                    <li><a href="#contact" class="contact--button">Contact</a></li>
+                </ul>
+                <div class="openMenu"><img class="hamburger--menu" src="img/menu.png" alt="menu button"></div>
+                <ul class="mainMenu">
+                    <li><a href="main.html">Learn</a></li>
+                    <li><a href="myaccount.html">My Account</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <div class="closeMenu"><img class="hamburger--menu" src="img/close-button.png" alt="close button" ></div>
+                </ul>
+            </nav>
     </header>
-
-
+    
+    
     <main>
         <a href="#" class="to-top">Back to top</a>
         <div class="image--slides">
@@ -35,7 +37,7 @@
             </div>
         </div>
         <section id="learning--plans">
-
+            
             <h1>Choose your plan</h1>
             <div>
                 <h2>Train yourself</h2>
@@ -66,12 +68,12 @@
                     </p>
                 </div>
             </div>
-
+            
         </section>
-
+        
     </main>
-
-
+    
+    
     <footer id="contact">
         <div class="footer--contact">
             <div class="mail--creators"> Contact creators </div>
@@ -87,10 +89,11 @@
     <section class="project">
         <h5>Web Technologies project | 2021</h5>
     </section>
-
-
-
-
+    
+    
+    <script src="./navbar.js"></script>
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
