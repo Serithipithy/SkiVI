@@ -334,6 +334,14 @@ h5 {
     transform: rotate(360deg);
 }
 
+.logo{
+    top: 0.2em;
+    left: 4%;
+    position: absolute;
+    width: 5em;
+    height: auto;
+}
+
 @media only screen and (max-width:800px) {
     .dropbtn {
         display: block;
