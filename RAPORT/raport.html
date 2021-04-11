@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+       ul{list-style-type: none;}
+   </style>
     <title>SkiVi-Scholarly Report</title>
 </head>
 
@@ -12,7 +15,7 @@
     <header>
         <p class="title">SkiVi - Scholarly Raport</p>
     </header>
-    <article typeof="schema:ScholarlyArticle" rescource="#">
+    <article typeof="schema:ScholarlyArticle">
         <h1>SkiVi</h1>
         <section>
             <h3>Contributors</h3>
@@ -32,12 +35,10 @@
                     <span property="schema:email"> alexandramosoiu19@gmail.com</span>
                 </li>
             </ol>
-            <ol>
                 <a href="https://www.info.uaic.ro/bin/Main/">
                     <span property="schema:name">Facultatea de Informatica Iasi , Universitatea Alexandru Ioan
                         Cuza</span>
                 </a>
-            </ol>
         </section>
         <section typeof="sa:Abstract" id="abstract">
             <h2>Table of Contents</h2>
@@ -75,205 +76,206 @@
             <ol>
                 <li>
                     <h3>Introduction</h3>
-                </li>
                 <ol>
                     <li>
                         <h4>Purpose</h4>
+                        <p>The main purpose of the project is to develop an application for learning different, unique and
+                            helpful skills and to make it more easier
+                            for the users to keep track of their leaning jurney.</p>
                     </li>
-                    <p>The main purpose of the project is to develop an application for learning different, unique and
-                        helpful skills and to make it more easier
-                        for the users to keep track of their leaning jurney.</p>
                     <li>
                         <h4>Document Conventions</h4>
+                        <p>The documentation is made under the Scholarly convention and IEEE-Template.</p>
                     </li>
-                    <p>The documentation is made under the Scholarly convention and IEEE-Template.</p>
                     <li>
                         <h4>Intended Audience and Reading Suggestions</h4>
+                        <p>The intended audience is represented by any person that wants to expand their knowledge with
+                            something new and
+                            unconventional or anyone that wants to contribute and make the application more accesible and
+                            wants to offer more information and courses.</p>
+                        <p>This document contains an overview of the application in order to provide information for all the
+                            users.</p>
+                        <p>The usual user will read some of the Overall Description, System Features and the rest of the
+                            audience that wants
+                            to provide something to the platform will read Overall Description, External Interface
+                            Requirements, System Features,
+                            Other Nonfunctional Requirements,Other Requirements
+                            Appendix A, B, C.</p>
                     </li>
-                    <p>The intended audience is represented by any person that wants to expand their knowledge with
-                        something new and
-                        unconventional or anyone that wants to contribute and make the application more accesible and
-                        wants to offer more information and courses.</p>
-                    <p>This document contains an overview of the application in order to provide information for all the
-                        users.</p>
-                    <p>The usual user will read some of the Overall Description, System Features and the rest of the
-                        audience that wants
-                        to provide something to the platform will read Overall Description, External Interface
-                        Requirements, System Features,
-                        Other Nonfunctional Requirements,Other Requirements
-                        Appendix A, B, C.</p>
                     <li>
                         <h4>Product Scope</h4>
+                        <p>The scope of the product is to provide courses for a number of skills such as first aid, survival
+                            techniques, learn an instrument(theremin)
+                            or dead languages etc. Along with this, the application will provide a pleasant experience while
+                            using it so the user will learn at its pace. </p>
                     </li>
-                    <p>The scope of the product is to provide courses for a number of skills such as first aid, survival
-                        techniques, learn an instrument(theremin)
-                        or dead languages etc. Along with this, the application will provide a pleasant experience while
-                        using it so the user will learn at its pace. </p>
                     <li>
                         <h4>References</h4>
+                        <p>TBA</p>
                     </li>
-                    <p>TBA</p>
                 </ol>
+                </li>
 
                 <li>
                     <h3>Overall Description</h3>
-                </li>
                 <ol>
                     <li>
                         <h4>Product Perspective</h4>
+                        <p>SkiVi is a modular web application which acts like a virtual instructor and provides different
+                            sets of activities and resources for learning
+                            different skills such as: learn an instrument,survival tehniques,first aid,origami.</p>
                     </li>
-                    <p>SkiVi is a modular web application which acts like a virtual instructor and provides different
-                        sets of activities and resources for learning
-                        different skills such as: learn an instrument,survival tehniques,first aid,origami.</p>
                     <li>
                         <h4>Product Functions</h4>
+                        <p>This application provides for the user the posibility to create an account so he/she can create
+                            his/her own personal learning plan.</p>
+                            <p> The user can check it's progress and for each course, he/she can start learning from the last
+                                watched material.</p>
+                            <p>Each course will be updated both automaticaly and at user demand, each update will be anounced on
+                                the course page.</p>
                     </li>
-                    <p>This application provides for the user the posibility to create an account so he/she can create
-                        his/her own personal learning plan.</p>
-                    <p> The user can check it's progress and for each course, he/she can start learning from the last
-                        watched material.</p>
-                    <p>Each course will be updated both automaticaly and at user demand, each update will be anounced on
-                        the course page.</p>
                     <li>
                         <h4>User Classes and Characteristics</h4>
+                        <p>Typical users who want to use SkiVi to learn a new skill. Advanced users who want to perfect one
+                            of their skills.</p>
                     </li>
-                    <p>Typical users who want to use SkiVi to learn a new skill. Advanced users who want to perfect one
-                        of their skills.</p>
                     <li>
                         <h4>Operating Environment</h4>
+                        <p>This Web aplication is compatible with any browser, it's interface provides support for big
+                            screens such as PC and mobile screens based on
+                            their dimensions, providing the users with a nice experience on their PC and on their mobile
+                            phone.
+                        </p>
                     </li>
-                    <p>This Web aplication is compatible with any browser, it's interface provides support for big
-                        screens such as PC and mobile screens based on
-                        their dimensions, providing the users with a nice experience on their PC and on their mobile
-                        phone.
-                    </p>
                     <li>
                         <h4>Design and Implementation Constraints</h4>
+                        <p>The front-end of the application is developed with HTML and CSS.</p>
+                        <p>The back-end TBA</p>
                     </li>
-                    <p>The front-end of the application is developed with HTML and CSS.</p>
-                    <p>The back-end TBA</p>
                     <li>
                         <h4>User Documentation</h4>
+                        <p>TBA</p>
                     </li>
-                    <p>TBA</p>
                     <li>
                         <h4>Assumptions and Dependencies</h4>
+                        <p> SkiVi is an aplication that is compatible with any browser, so you don't need anything else then
+                            your favourite web browser.</p>
                     </li>
-                    <p> SkiVi is an aplication that is compatible with any browser, so you don't need anything else then
-                        your favourite web browser.</p>
                 </ol>
+                </li>
 
                 <li>
                     <h3>External Interface Requirements</h3>
-                </li>
+                
                 <ol>
                     <li>
                         <h4>User Interfaces</h4>
+                        <p>The interface for this application provides support for big screens and mobile screens based on
+                            their dimentions. This separation is required
+                            for a more pleasant experience and a much more easier usability of the app. </p>
+                        <p>PC view</p>
+                        <ul>
+                            <li><img src="img/mainPage1--pc.png" width="1000" alt="image1"></li>
+                            <li><img src="img/mainPage2--pc.png" width="1000" alt="image2"></li>
+                            <li><img src="img/mainPage3--pc.png" width="1000" alt="image3"></li>
+                            <li><img src="img/login--pc.png" width="1000" alt="image4"></li>
+                            <li><img src="img/signup--pc.png" width="1000" alt="image5"></li>
+                            <li><img src="img/coursepage1--pc.png" width="1000" alt="image6"></li>
+                            <li><img src="img/coursepage2--pc.png" width="1000" alt="image7"></li>
+                            <li><img src="img/coursepage3--pc.png" width="1000" alt="image8"></li>
+                            <li><img src="img/myaccount1--pc.png" width="1000" alt="image9"></li>
+                            <li><img src="img/myaccount2--pc.png" width="1000" alt="image10"></li>
+                        </ul>
+                        <p>Mobile view</p>
+                        <ul>
+                            <li><img src="img/mainPage1--mobile.png" width="350" alt="image1"></li>
+                            <li><img src="img/mainPage2--mobile.png" width="350" alt="image2"></li>
+                            <li><img src="img/mainPage3--mobile.png" width="350" alt="image3"></li>
+                            <li><img src="img/menu--mobile.png" width="350" alt="image4"></li>
+                            <li><img src="img/login--mobile.png" width="350" alt="image5"></li>
+                            <li><img src="img/signup--mobile.png" width="350" alt="image6"></li>
+                            <li><img src="img/coursepage1--mobile.png" width="350" alt="image7"></li>
+                            <li><img src="img/coursepage2--mobile.png" width="350" alt="image8"></li>
+                            <li><img src="img/coursepage3--mobile.png" width="350" alt="image9"></li>
+                            <li><img src="img/myaccount1--mobile.png" width="350" alt="image10"></li>
+                            <li><img src="img/myaccount2--mobile.png" width="350" alt="image11"></li>
+                        </ul>
                     </li>
-                    <p>The interface for this application provides support for big screens and mobile screens based on
-                        their dimentions. This separation is required
-                        for a more pleasant experience and a much more easier usability of the app. </p>
-                    <p>PC view</p>
-                    <figure typeof="sa:image">
-                        <img src="img/mainPage1--pc.png" width="49%">
-                        <img src="img/mainPage2--pc.png" width="49%">
-                        <img src="img/mainPage3--pc.png" width="49%">
-                        <img src="img/login--pc.png" width="49%">
-                        <img src="img/signup--pc.png" width="49%">
-                        <img src="img/coursepage1--pc.png" width="49%">
-                        <img src="img/coursepage2--pc.png" width="49%">
-                        <img src="img/coursepage3--pc.png" width="49%">
-                        <img src="img/myaccount1--pc.png" width="49%">
-                        <img src="img/myaccount2--pc.png" width="49%">
-                    </figure>
 
-                    <p>Mobile view</p>
-                    <figure typeof="sa:image">
-                        <img src="img/mainPage1--mobile.png" width="24%">
-                        <img src="img/mainPage2--mobile.png" width="24%">
-                        <img src="img/mainPage3--mobile.png" width="24%">
-                        <img src="img/menu--mobile.png" width="24%">
-                        <img src="img/login--mobile.png" width="24%">
-                        <img src="img/signup--mobile.png" width="24%">
-                        <img src="img/coursepage1--mobile.png" width="24%">
-                        <img src="img/coursepage2--mobile.png" width="24%">
-                        <img src="img/coursepage3--mobile.png" width="24%">
-                        <img src="img/myaccount1--mobile.png" width="24%">
-                        <img src="img/myaccount2--mobile.png" width="24%">
-                    </figure>
                     <li>
                         <h4>Hardware Interfaces</h4>
+                        <p>The application does not require anything special and a device connected to the internet is
+                            enough. It is design for any type of screen,
+                            from big ones to really small ones such as Galaxy Fold screen.</p>
                     </li>
-                    <p>The application does not require anything special and a device connected to the internet is
-                        enough. It is design for any type of screen,
-                        from big ones to really small ones such as Galaxy Fold screen.</p>
                     <li>
                         <h4>Software Interfaces</h4>
+                        <p>TBA</p>
                     </li>
-                    <p>TBA</p>
                     <li>
                         <h4>Communications Interfaces</h4>
+                        <p>TBA</p>
                     </li>
-                    <p>TBA</p>
                 </ol>
+                </li>
 
                 <li>
                     <h3>System Features</h3>
+                    <p>TBA</p>
                 </li>
-                <p>TBA</p>
 
                 <li>
                     <h3>Other Nonfunctional Requirements</h3>
-                </li>
                 <ol>
                     <li>
                         <h4>Performance Requirements</h4>
+                        <p>There is no special performance requirements.</p>
                     </li>
-                    <p>There is no special performance requirements.</p>
                     <li>
                         <h4>Safety Requirements</h4>
+                        <p>Some of the courses may require special resources that can harm the person that uses them and
+                            they need to be cautious. In case of emergency
+                            they should call special care.</p>
                     </li>
-                    <p>Some of the courses may require special resources that can harm the person that uses them and
-                        they need to be cautious. In case of emergency
-                        they should call special care.</p>
                     <li>
                         <h4>Security Requirements</h4>
+                        <p>After the user creates his/her account, their data will be secure without sharing it to a third
+                            party.</p>
+                            <p>For creating an account, the user will provide a username, his/her e-mail and a password. </p>
+                            <p>Every course will give credits to the creator and contact information of the course owner. </p>
                     </li>
-                    <p>After the user creates his/her account, their data will be secure without sharing it to a third
-                        party.</p>
-                    <p>For creating an account, the user will provide a username, his/her e-mail and a password. </p>
-                    <p>Every course will give credits to the creator and contact information of the course owner. </p>
                     <li>
                         <h4>Software Quality Attributes</h4>
+                        <p>Due to its well designed and easy to use interface it can be used by both experts and typical
+                            users.</p>
                     </li>
-                    <p>Due to its well designed and easy to use interface it can be used by both experts and typical
-                        users.</p>
                     <li>
                         <h4>Business Rules</h4>
+                        <p>Contact information are available in order to communicate with the experts that want to provide
+                            courses for the application.</p>
                     </li>
-                    <p>Contact information are available in order to communicate with the experts that want to provide
-                        courses for the application.</p>
                 </ol>
+                </li>
 
                 <li>
                     <h3>Other Requirements</h3>
+                    <p>TBA</p>
                 </li>
-                <p>TBA</p>
                 <li>
                     <h3>Appendix A: Glossary</h3>
+                    <p>TBA</p>
                 </li>
-                <p>TBA</p>
                 <li>
                     <h3>Appendix B: Analysis Models</h3>
+                    <p>Arhitectural diagram</p>
+                <ul>
+                    <li><img src="img/raport--diagram.png" width="1400" alt="image"></li>
+                </ul>
                 </li>
-                <p>Arhitectural diagram</p>
-                <figure typeof="sa:image">
-                    <img src="img/raport--diagram.png" width="100%">
-                </figure>
                 <li>
                     <h3>Appendix C: To Be Determined List</h3>
+                    <p>TBA</p>
                 </li>
-                <p>TBA</p>
             </ol>
 
         </section>
