@@ -1,4 +1,4 @@
-.myaccount--banner{
+.myaccount--banner {
     /* margin-top: -3%; */
     width: 100%;
     height: 10em;
@@ -7,21 +7,25 @@
     text-align: left;
     display: flexbox;
 }
-.myaccount--banner--dimensioning{
+
+.myaccount--banner--dimensioning {
     padding-left: 11%;
 }
-h1{
+
+h1 {
     padding-top: 0.7em;
     font-size: 2.5em;
 }
-h4{
+
+h4 {
     font-weight: bolder;
     padding: 1em;
     padding-bottom: 2em;
     font-size: 0.9em;
     margin: 0;
 }
-.account--container{
+
+.account--container {
     width: 100%;
     padding-top: 2em;
     display: flex;
@@ -33,58 +37,62 @@ h4{
     /* box-shadow: 0px 2px 17px -10px #f78888; */
     height: 18em;
 }
-.profile--picture{
+
+.profile--picture {
     width: 10em;
     height: 10em;
     border-radius: 50%;
 }
-.account--profile{
+
+.account--profile {
     display: list-item;
     width: 10em;
-    padding:1em;
+    padding: 1em;
     padding-left: 15%;
 }
 
-.account--username{
+.account--username {
     display: block;
     position: relative;
     text-align: center;
     color: #e96a6a;
     font-weight: bolder;
 }
-form{
+
+form {
     margin-left: 10%;
-    margin-top:-0.6em;
+    margin-top: -0.6em;
     width: 20em;
     height: 26.5625em;
 }
-input{
+
+input {
     width: 100%;
     height: 2em;
     margin-top: 1em;
     box-shadow: 0px 2px 17px -10px #000000;
-    border:2px solid lightgray;
-	background-color: rgba(231, 231, 231, 0.623);
-	border-radius:2px;
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	text-decoration:none;
+    border: 2px solid lightgray;
+    background-color: rgba(231, 231, 231, 0.623);
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
 }
 
-button{
+button {
     margin-left: 2em;
     margin-top: 1.3em;
     padding: 0.4em 2em 0.4em 2em;
     border: 4px #f78888;
     background-color: #f78888;
-    border-radius:3px ;
+    border-radius: 3px;
     font-weight: bolder;
     color: white;
     cursor: pointer;
 }
 
-.account--mail{
+.account--mail {
     color: #e96a6a;
     display: block;
     font-weight: bolder;
@@ -92,7 +100,7 @@ button{
     margin-bottom: 0em;
 }
 
-span{
+span {
     padding: 1.5em 1em 1.5em 1em;
     font-weight: bold;
     font-size: 2em;
@@ -100,42 +108,48 @@ span{
     display: flex;
     justify-content: center;
 }
-section div{
+
+section div {
     display: block;
 }
-.account-skills{
+
+.account-skills {
     width: 100%;
     display: block;
     border-bottom: 2px solid #f78888;
-
 }
 
-section div h2{
+section div h2 {
     font-weight: bolder;
     color: rgb(139, 139, 139);
     font-size: 1.5em;
     padding: 0;
     margin-bottom: 1.3em;
 }
-p{
+
+p {
     font-weight: bolder;
     color: rgb(139, 139, 139);
     display: inline;
 }
-.progress--status{
+
+.progress--status {
     padding-bottom: 1.5em;
 }
-.play-pause--button{
+
+.play-pause--button {
     height: 1.5em;
     margin-right: 1em;
 }
-.skill--stats{
+
+.skill--stats {
     width: 100%;
     margin-bottom: 2em;
     display: flex;
     justify-content: space-evenly;
 }
-.skill--container{
+
+.skill--container {
     padding: 1.5em 1.5em 1.5em 2em;
     width: 50%;
     height: auto;
@@ -149,70 +163,76 @@ progress {
     width: 20em;
     height: 0.8em;
     border-radius: 10px;
+}
 
-  }
-  progress::-webkit-progress-bar {
+progress::-webkit-progress-bar {
     background-color: rgba(136, 136, 136, 0.144);
     border-radius: 10px;
-  }
-  progress::-webkit-progress-value {
+}
+
+progress::-webkit-progress-value {
     background-color: #f78888;
     border-radius: 10px;
+}
 
-  }
-  progress::-moz-progress-bar {
+progress::-moz-progress-bar {
     background-color: #f78888;
     border-radius: 10px;
-  }
+}
 
-.last---watched{
+.last---watched {
     padding-bottom: 1.5em;
 }
-.link{
+
+.link {
     margin-left: 2em;
     color: #f78888;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-}  
+}
 
-.skill--image{
+.skill--image {
     padding: 0;
     height: 30%;
     width: 20%;
 }
+
 .to-top {
     right: 2%;
 }
 
-@media only screen and (max-width:1000px){
-    .skill--image{
+.contact--list .mail--creators {
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:1000px) {
+    .skill--image {
         display: none;
     }
-    .skill--container{
+    .skill--container {
         width: 75%;
-
     }
     progress {
         margin-left: 3em;
         width: 50%;
         height: 0.8em;
         border-radius: 10px;
-    
-      }
-      section div h2{
+    }
+    section div h2 {
         font-size: 1.2em;
     }
-    p{
+    p {
         font-size: 0.8em;
     }
-    .last---watched > a{
+    .last---watched>a {
         font-size: 0.8em;
     }
 }
 
-@media only screen and (max-width:750px){
-    .account--container{
+@media only screen and (max-width:750px) {
+    .account--container {
         /* display:block; */
         display: flex;
         flex-direction: column;
@@ -220,55 +240,54 @@ progress {
         justify-content: center;
         height: 30em;
     }
-    .account--profile{
+    .account--profile {
         padding-left: 2%;
     }
-    form{
+    form {
         margin-left: 0;
         width: 50%;
     }
 }
-@media only screen and (max-width:450px){
-    .account--profile{
+
+@media only screen and (max-width:450px) {
+    .account--profile {
         padding-left: 7%;
     }
 }
-@media only screen and (max-width:320px){
-    button{
+
+@media only screen and (max-width:320px) {
+    button {
         margin-left: 0;
         width: 12.5em;
     }
-
 }
 
-@media only screen and (max-width:280px){
-    h1{
+@media only screen and (max-width:280px) {
+    h1 {
         font-size: 1.8em;
     }
-    .skill--image{
+    .skill--image {
         display: none;
     }
-    .skill--container{
+    .skill--container {
         width: 75%;
-
     }
     progress {
         margin-left: 3em;
         width: 40%;
         height: 0.8em;
         border-radius: 10px;
-    
-      }
-      section div h2{
+    }
+    section div h2 {
         font-size: 1.2em;
     }
-    p{
+    p {
         font-size: 0.8em;
     }
-    .last---watched > a{
+    .last---watched>a {
         font-size: 0.8em;
     }
-    button{
+    button {
         width: 11em;
     }
 }

@@ -334,7 +334,7 @@ h5 {
     transform: rotate(360deg);
 }
 
-.logo{
+.logo {
     top: 0.2em;
     left: 4%;
     position: absolute;
@@ -401,7 +401,7 @@ h5 {
     .dropdown--content {
         right: -2.4em;
     }
-    .mail--creators{
+    .mail--creators {
         font-size: 0.8em;
     }
 }
