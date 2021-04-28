@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet"  href="../public/css/skivi2.css" type="text\css">
-    <link rel="stylesheet"  href="../public/css/skivilog.css" type="text\css">
-    <link rel="stylesheet"  href="../public/css/header.css" type="text\css">
+    <link rel="stylesheet"  href="../css/skivi2.css" type="text/css">
+    <link rel="stylesheet"  href="../css/skivilog.css" type="text/css">
+    <link rel="stylesheet"  href="../css/header.css" type="text/css">
     <title>SkiVi | Login</title>
 </head>
 
