@@ -233,7 +233,7 @@ section div {
 }
 
 footer {
-    background-image: url("/public/assets/img/footer-model.png");
+    background: #0e0e0e;
     border: 2px solid #0e0e0e;
     border-top-color: #f78888;
     padding: 0px;
