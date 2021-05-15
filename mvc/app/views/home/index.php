@@ -21,10 +21,11 @@ echo "de ce nu mergi muie";
             <div><img class="logo" src="../assets/img/logo.png" alt="logo"></div>
             <div class="openMenu"><img class="hamburger--menu" src="../assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
-                <li><a href="main.html">Learn</a></li>
-                <li><a href="myaccount.html">My Account</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Log In</a></li>
+            //aici nu merge pt account trebuie ceva facut :)
+                <li><a href="./index">Learn</a></li>
+                <li><a href="/public/accounts/myaccount">My Account</a></li>
+                <li><a href="./signup">Sign Up</a></li>
+                <li><a href="./login">Log In</a></li>
                 <li class="closeMenu"><img class="hamburger--menu" src="../assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>

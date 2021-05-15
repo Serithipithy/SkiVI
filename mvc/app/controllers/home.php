@@ -15,5 +15,11 @@ class Home extends  Controller{
        $user->name=$name;
         $this->view('home/login',['name'=>$user->name]);
     }
+
+    public function signup($name=''){
+        $user=$this->model('User');
+        $user->name=$name;
+        $this->view('home/signup',['name'=>$user->name]);
+    }
 }
 ?>
