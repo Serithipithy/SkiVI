@@ -1,4 +1,3 @@
-<?php?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet"  href="../css/skivi2.css" type="text/css">
-    <link rel="stylesheet"  href="../css/skivilog.css" type="text/css">
-    <link rel="stylesheet"  href="../css/header.css" type="text/css">
-    <title>SkiVi | Login</title>
+    <link rel="stylesheet" href="../css/skivi2.css" type="text/css">
+    <link rel="stylesheet" href="../css/header.css" type="text/css">
+    <link rel="stylesheet" href="../css/skivilog.css" type="text/css">
+    <title>SkiVi | Sign Up</title>
 </head>
 
 <body>
@@ -19,31 +17,31 @@
             <ul>
                 <li><a href="#contact" class="contact--button">Contact</a></li>
             </ul>
-            <div><img class="logo" src="../css/img/logo.png" alt="logo"></div>
-            <div class="openMenu"><img class="hamburger--menu" src="../css/img/menu.png" alt="menu button"></div>
+            <div><img class="logo" src="../assets/img/logo.png" alt="logo"></div>
+            <div class="openMenu"><img class="hamburger--menu" src="../assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
-                <li><a href="main.html">Learn</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li class="closeMenu"><img class="hamburger--menu" src="../css/img/close-button.png" alt="close button"></li>
+                <li><a href="<?php URLROOT;?>/index.php">Learn</a></li>
+                <li><a href="<?php URLROOT;?>/login.php">Log In</a></li>
+                <li class="closeMenu"><img class="hamburger--menu" src="../assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>
     </header>
 
-
     <main>
-        <div class="formular--box">
+        <div class="formular--box--sign--up">
             <form>
-                <p class="title">Log In</p>
+                <p class="title">Sign up</p>
+                <label>Username</label>
+                <input type="text" placeholder="Your username">
                 <label>E-mail</label>
                 <input type="email" placeholder="Your email">
                 <label>Password</label>
                 <input type="password" placeholder="Your password">
                 <button type="submit">Submit</button>
             </form>
-            <p class="extra--info">Don't have an acount? Please click <a href="signup.html">here</a> to Sign up.</p>
+            <p class="extra--info">You already have an account? Please click <a href="/login.php">here</a> to Log In.</p>
         </div>
     </main>
-
 
     <footer id="contact">
         <div class="footer--contact">
@@ -61,7 +59,7 @@
         <h5>Web Technologies project | 2021</h5>
     </section>
 
-    <!-- <script src="../public/js/navbar.js"></script> -->
+    <script src="../js/navbar.js"></script>
 
 </body>
 

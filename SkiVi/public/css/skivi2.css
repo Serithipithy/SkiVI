@@ -233,7 +233,7 @@ section div {
 }
 
 footer {
-    background-image: url("img/footer-model.png");
+    background-image: url("../assets/img/footer-model.png");
     border: 2px solid #0e0e0e;
     border-top-color: #f78888;
     padding: 0px;
@@ -312,7 +312,7 @@ h5 {
 
 .to-top:before {
     text-align: center;
-    content: '▲';
+    content: '/';
     font-size: 0.9em;
     position: absolute;
     top: 0;

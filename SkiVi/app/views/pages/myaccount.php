@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/skivi2.css">
-    <link rel="stylesheet" href="css/skivimyaccount.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="../css/skivi2.css" type="text/css">
+    <link rel="stylesheet" href="../css/skivimyaccount.css" type="text/css">
+    <link rel="stylesheet" href="../css/header.css" type="text/css">
     <title>SkiVi | My account</title>
 </head>
 
@@ -17,14 +17,14 @@
             <ul>
                 <li><a href="#contact" class="contact--button">Contact</a></li>
             </ul>
-            <div><img class="logo" src="css/img/logo.png" alt="logo"></div>
-            <div class="openMenu"><img class="hamburger--menu" src="css/img/menu.png" alt="menu button"></div>
+            <div><img class="logo" src="../assets/img/logo.png" alt="logo"></div>
+            <div class="openMenu"><img class="hamburger--menu" src="../assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
                 <li><a href="main.html">Learn</a></li>
                 <li><a href="myaccount.html">My Account</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
                 <li><a href="login.html">Log In</a></li>
-                <li class="closeMenu"><img class="hamburger--menu" src="css/img/close-button.png" alt="close button"></li>
+                <li class="closeMenu"><img class="hamburger--menu" src="../assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +38,7 @@
 
         <div class="account--container">
             <div class="account--profile">
-                <img src="css/img/profile-picture.jpg" alt="profile picture" class="profile--picture" />
+                <img src="../assets/img/profile-picture.jpg" alt="profile picture" class="profile--picture" />
                 <p class="account--username">YourUsername</p>
             </div>
             <form>
@@ -62,10 +62,10 @@
                     <div class="last---watched">
                         <p>Last video watched: </p> <a href="https://www.youtube.com/watch?v=bSqHJaGyC_A" class="link">Title last video watched</a>
                     </div>
-                    <img src="css/img/play-button.png" alt="play" class="play-pause--button" />
-                    <img src="css/img/pause-button.png" alt="play" class="play-pause--button" />
+                    <img src="../assets/img/play-button.png" alt="play" class="play-pause--button" />
+                    <img src="../assets/img/pause-button.png" alt="play" class="play-pause--button" />
                 </div>
-                <img src="css/img/skill1.jpg" alt="skill 1 imagine" class="skill--image" />
+                <img src="../assets/img/skill1.jpg" alt="skill 1 imagine" class="skill--image" />
             </div>
 
             <div class="skill--stats">
@@ -78,10 +78,10 @@
                     <div class="last---watched">
                         <p>Last video watched: </p> <a href="https://www.youtube.com/watch?v=bSqHJaGyC_A" class="link">Title last video watched</a>
                     </div>
-                    <img src="css/img/play-button.png" alt="play" class="play-pause--button" />
-                    <img src="css/img/pause-button.png" alt="play" class="play-pause--button" />
+                    <img src="../assets/img/play-button.png" alt="play" class="play-pause--button" />
+                    <img src="../assets/img/pause-button.png" alt="play" class="play-pause--button" />
                 </div>
-                <img src="css/img/skill2.jpg" alt="skill 1 imagine" class="skill--image" />
+                <img src="../assets/img/skill2.jpg" alt="skill 1 imagine" class="skill--image" />
             </div>
 
             <div class="skill--stats">
@@ -94,10 +94,10 @@
                     <div class="last---watched">
                         <p>Last video watched: </p> <a href="https://www.youtube.com/watch?v=bSqHJaGyC_A" class="link">Title last video watched</a>
                     </div>
-                    <img src="css/img/play-button.png" alt="play" class="play-pause--button" />
-                    <img src="css/img/pause-button.png" alt="play" class="play-pause--button" />
+                    <img src="../assets/img/play-button.png" alt="play" class="play-pause--button" />
+                    <img src="../assets/img/pause-button.png" alt="play" class="play-pause--button" />
                 </div>
-                <img src="css/img/skill3.jpg" alt="skill 1 imagine" class="skill--image" />
+                <img src="../assets/img/skill3.jpg" alt="skill 1 imagine" class="skill--image" />
             </div>
 
         </section>
@@ -119,7 +119,7 @@
         <h5>Web Technologies project | 2021</h5>
     </section>
 
-    <script src="js/navbar.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>

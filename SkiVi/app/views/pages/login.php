@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/skivi2.css">
-    <link rel="stylesheet" href="css/skivilog.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="../css/skivi2.css" type="text/css">
+    <link rel="stylesheet" href="../css/header.css" type="text/css">
+    <link rel="stylesheet" href="../css/skivilog.css" type="text/css">
     <title>SkiVi | Login</title>
 </head>
 
@@ -17,12 +16,12 @@
             <ul>
                 <li><a href="#contact" class="contact--button">Contact</a></li>
             </ul>
-            <div><img class="logo" src="css/img/logo.png" alt="logo"></div>
-            <div class="openMenu"><img class="hamburger--menu" src="css/img/menu.png" alt="menu button"></div>
+            <div><img class="logo" src="../assets/img/logo.png" alt="logo"></div>
+            <div class="openMenu"><img class="hamburger--menu" src="../assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
                 <li><a href="main.html">Learn</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
-                <li class="closeMenu"><img class="hamburger--menu" src="css/img/close-button.png" alt="close button"></li>
+                <li class="closeMenu"><img class="hamburger--menu" src="../assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>
     </header>
@@ -43,7 +42,7 @@
     </main>
 
 
-    <footer id="contact">
+    <footer id="contact" >
         <div class="footer--contact">
             <div class="mail--creators"> Contact creators </div>
             <div class="contact--list">
@@ -59,7 +58,7 @@
         <h5>Web Technologies project | 2021</h5>
     </section>
 
-    <script src="js/navbar.js"></script>
+    <script src="../js/navbar.js"></script>
 
 </body>
 
