@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/skivi2.css" type="text/css">
-    <link rel="stylesheet" href="../css/header.css" type="text/css">
-    <link rel="stylesheet" href="../css/skivilog.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivi2.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/header.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivilog.css" type="text/css">
     <title>SkiVi | Login</title>
 </head>
 
@@ -17,11 +17,11 @@
                 <li><a href="#contact" class="contact--button">Contact</a></li>
             </ul>
             <div><img class="logo" src="../assets/img/logo.png" alt="logo"></div>
-            <div class="openMenu"><img class="hamburger--menu" src="../assets/img/menu.png" alt="menu button"></div>
+            <div class="openMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
                 <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
                 <li><a href="<?php echo URLROOT;?>/users/signup">Sign Up</a></li>
-                <li class="closeMenu"><img class="hamburger--menu" src="../assets/img/close-button.png" alt="close button"></li>
+                <li class="closeMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>
     </header>
@@ -33,15 +33,16 @@
                 <p class="title">Log In</p>
                 <label>Username</label>
                 <input type="text" placeholder="Your username" name='username'>
-                    <span> 
+                    <span class="error-messages"> 
                         <?php echo $data['usernameError'];?>
                     </span>
                 <label>Password</label>
                 <input type="password" placeholder="Your password" name='password'>
-                    <span> 
+                    <span class="error-messages"> 
                         <?php echo $data['passwordError'];?>
                     </span>
                 <button id="submit" type="submit" value="submit">Submit</button>
+                
             </form>
             <p class="extra--info">Don't have an acount? Please click <a href="<?php echo URLROOT;?>/users/signup">here</a> to Sign up.</p>
         </div>
@@ -64,7 +65,7 @@
         <h5>Web Technologies project | 2021</h5>
     </section>
 
-    <script src="../js/navbar.js"></script>
+    <script src="<?php echo STYLEROOT;?>/js/navbar.js"></script>
 
 </body>
 

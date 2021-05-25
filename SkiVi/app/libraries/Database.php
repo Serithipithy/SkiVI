@@ -6,7 +6,7 @@
         private $error;
 
         public function __construct(){
-            $conn ='sqlite:E:\alexa\Documents\TW\SkiVi\app\SkiViDB';
+            $conn ='sqlite:C:\Users\cosmi\OneDrive\Desktop\facultate\sem2\tweb\SkiVi\app\SkiViDB';
             try{
                 $this->dbHandler = new PDO($conn);
             } catch (PDOException $e){
