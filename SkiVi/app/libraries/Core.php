@@ -1,14 +1,14 @@
 <?php
     class Core{
-        protected $currentController = 'Pages';
+        protected $currentController = 'pages';
         protected $currentMethod = 'index';
         protected $params = [];
 
         public function __construct(){
             $url = $this->getUrl();
-
+            
             // cauta in "controllers" prima valoare, ucwords face toupper la prima litera
-            if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')){
+            if(isset($url[0]) && file_exists('../app/controllers/' . ucwords($url[0]) . '.php')){
                 // seteaza un nou controller
                 $this->currentController = ucwords($url[0]);
                 unset($url[0]);

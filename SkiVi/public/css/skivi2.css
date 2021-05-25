@@ -312,7 +312,7 @@ h5 {
 
 .to-top:before {
     text-align: center;
-    content: '/';
+    content: '▲';
     font-size: 0.9em;
     position: absolute;
     top: 0;

@@ -20,10 +20,10 @@
             <div><img class="logo" src="../assets/img/logo.png" alt="logo"></div>
             <div class="openMenu"><img class="hamburger--menu" src="../assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
-                <li><a href="main.html">Learn</a></li>
-                <li><a href="myaccount.html">My Account</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Log In</a></li>
+            <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
+                <li><a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a></li>
+                <li><a href="<?php echo URLROOT;?>/users/signup">Sign Up</a></li>
+                <li><a href="<?php echo URLROOT;?>/users/login">Log In</a></li>
                 <li class="closeMenu"><img class="hamburger--menu" src="../assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>

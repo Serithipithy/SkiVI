@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-echo "muie si tie";
-?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/skivi2.css" type="text/css">
-    <link rel="stylesheet" href="../styles/header.css" type="text/css">
-    <link rel="stylesheet" href="../styles/skivilog.css" type="text/css">
+    <link rel="stylesheet" href="../css/skivi2.css" type="text/css">
+    <link rel="stylesheet" href="../css/header.css" type="text/css">
+    <link rel="stylesheet" href="../css/skivilog.css" type="text/css">
     <title>SkiVi | Login</title>
 </head>
 
@@ -22,8 +19,8 @@ echo "muie si tie";
             <div><img class="logo" src="../assets/img/logo.png" alt="logo"></div>
             <div class="openMenu"><img class="hamburger--menu" src="../assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
-                <li><a href="main.html">Learn</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
+                <li><a href="<?php echo URLROOT;?>/users/signup">Sign Up</a></li>
                 <li class="closeMenu"><img class="hamburger--menu" src="../assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>
@@ -32,15 +29,21 @@ echo "muie si tie";
 
     <main>
         <div class="formular--box">
-            <form>
+            <form action="<?php echo URLROOT?>/users/login" method = "POST">
                 <p class="title">Log In</p>
-                <label>E-mail</label>
-                <input type="email" placeholder="Your email">
+                <label>Username</label>
+                <input type="text" placeholder="Your username" name='username'>
+                    <span> 
+                        <?php echo $data['usernameError'];?>
+                    </span>
                 <label>Password</label>
-                <input type="password" placeholder="Your password">
-                <button type="submit">Submit</button>
+                <input type="password" placeholder="Your password" name='password'>
+                    <span> 
+                        <?php echo $data['passwordError'];?>
+                    </span>
+                <button id="submit" type="submit" value="submit">Submit</button>
             </form>
-            <p class="extra--info">Don't have an acount? Please click <a href="signup.html">here</a> to Sign up.</p>
+            <p class="extra--info">Don't have an acount? Please click <a href="<?php echo URLROOT;?>/users/signup">here</a> to Sign up.</p>
         </div>
     </main>
 
@@ -61,7 +64,7 @@ echo "muie si tie";
         <h5>Web Technologies project | 2021</h5>
     </section>
 
-    <script src="../scripts/navbar.js"></script>
+    <script src="../js/navbar.js"></script>
 
 </body>
 

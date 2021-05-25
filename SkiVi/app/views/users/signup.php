@@ -20,8 +20,8 @@
             <div><img class="logo" src="../assets/img/logo.png" alt="logo"></div>
             <div class="openMenu"><img class="hamburger--menu" src="../assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
-                <li><a href="<?php URLROOT;?>/index.php">Learn</a></li>
-                <li><a href="<?php URLROOT;?>/login.php">Log In</a></li>
+                <li><a href="<?php echo URLROOT;?>/index">Learn</a></li>
+                <li><a href="<?php echo URLROOT;?>/login">Log In</a></li>
                 <li class="closeMenu"><img class="hamburger--menu" src="../assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>
@@ -29,17 +29,26 @@
 
     <main>
         <div class="formular--box--sign--up">
-            <form>
+            <form action="<?php echo URLROOT?>/users/signup" method = "POST">
                 <p class="title">Sign up</p>
                 <label>Username</label>
-                <input type="text" placeholder="Your username">
+                <input type="text" placeholder="Your username" name="username">
+                    <span> 
+                        <?php echo $data['usernameError'];?>
+                    </span>
                 <label>E-mail</label>
-                <input type="email" placeholder="Your email">
+                <input type="email" placeholder="Your email" name="email">
+                    <span> 
+                        <?php echo $data['emailError'];?>
+                    </span>
                 <label>Password</label>
-                <input type="password" placeholder="Your password">
+                <input type="password" placeholder="Your password" name="password">
+                    <span> 
+                        <?php echo $data['passwordError'];?>
+                    </span>
                 <button type="submit">Submit</button>
             </form>
-            <p class="extra--info">You already have an account? Please click <a href="/login.php">here</a> to Log In.</p>
+            <p class="extra--info">You already have an account? Please click <a href="<?php echo URLROOT;?>/users/login">here</a> to Log In.</p>
         </div>
     </main>
 
