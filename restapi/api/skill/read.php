@@ -7,16 +7,16 @@ header('Access-Control-Allow-Origin:*');
 header('Content-Type:application/json');
 
 include_once'../../config/Database.php';
-include_once'../../models/User.php';
+include_once'../../models/Skill.php';
 
 //instantiate db &connect
 $database=new Database();
 $db=$database->connect();
 
-$user=new User($db);
+$skill=new Skill($db);
 
-//user query
-$result=$user->read();
+//skill query
+$result=$skill->read();
 
 //get rowcount
 $num=$result->rowCount();
@@ -25,25 +25,26 @@ echo $num;
 //check if any users;
 if($num>0){
     //post array
-    $user_arr=array();
-    $user_arr['data']=array();
+    $skill_arr=array();
+    $skill_arr['data']=array();
 
     while($row =$result->fetch(PDO::FETCH_ASSOC)){
         extract($row);
 
-        $user_item= array(
-            'user_id'=>$user_id,
-            'user_name'=>$user_name,
-            'user_email'=>$user_email
+        $skill_item= array(
+            'skill_id'=>$id_s,
+            'skill_title'=>$title,
+            'skill_description'=>$description,
+            'skill_author'=>$author
         );
 
         //push to 'data'
-        array_push($user_arr['data'],$user_item);
+        array_push($skill_arr['data'],$skill_item);
     }
-    echo json_encode($user_arr);
+    echo json_encode($skill_arr);
 }else{
-    //no users
+    //no skills
     echo json_encode(
-        array('message' => 'No users Found')
+        array('message' => 'No skills Found')
       );
 }

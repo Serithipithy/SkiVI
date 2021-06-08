@@ -28,4 +28,16 @@ Class User{
 
         return $stmt;
     }
+
+    public function read_single(){
+        $query='select * from users where user_id= ? LIMIT 0,1';
+        $stmt=$this->conn->prepare($query);
+        $stmt->bindParam(1,$this->id);
+        $stmt->execute();
+
+        $row=$stmt->fetch(PDO::FETCH_ASSOC);
+
+        $this->user_name=$row['user_name'];
+        $this->user_email=$row['user_email'];
+    }
 }
