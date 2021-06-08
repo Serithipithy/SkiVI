@@ -23,19 +23,24 @@ $skill=new Skill($db);
 
 $data=json_decode(file_get_contents("php://input"));
 
-//set id to update
+//get title to delete
+$skill->title=isset($_GET['title'])?$_GET['title']:die();
 
-$skill->id=$data->id;
- 
-//create the skill
+//format title
+$skill->title = strtolower($skill->title);
+$skill->title = str_replace(" ","_",$title_skill);
 
-if($skill->delete()){
+//set skill id after name
+$skill->set_skill_id_by_name();
+
+// perform delete
+if($skill->drop_table() && $skill->delete()){
     echo json_encode(
-        array('message'=>'skill deleted')
+        array('message'=>'Skill has been deleted')
     );
 }else{
     echo json_encode(
-        array('message'=>'skill not deleted')
+        array('message'=>'Skill can not be deleted safely.')
     );
 }
 

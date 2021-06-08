@@ -11,21 +11,40 @@ class Skill{
     public $author;
 
     //constructor with DB
-
     public function __construct($db){
         $this->conn=$db;
     }
 
     public function read(){
+
         //create query;
-        echo 'in read ';
         $query='select * from skills';
+
         //prepare statement
         $stmt=$this->conn->prepare($query);
+
         //execute query
         $stmt->execute();
 
         return $stmt;
+    }
+
+    public function set_skill_id_by_name(){
+
+        //create query;
+        $query='select * from skills where title = \'' . $this->title .'\'' ;
+        echo $query;
+
+        //prepare statement
+        $stmt=$this->conn->prepare($query);
+
+        //execute query
+        $stmt->execute();
+
+        //get rows content
+        $row=$stmt->fetch(PDO::FETCH_ASSOC);
+
+        $this->id = $row['id_s'];
     }
 
     public function read_single(){
@@ -44,8 +63,8 @@ class Skill{
 
     // for adding a new skill
     public function create(){
-        //create query
 
+        //create query
         $query='INSERT INTO skills 
               SET
                 title = :title,
@@ -55,8 +74,7 @@ class Skill{
         //prepare statement
         $stmt=$this->conn->prepare($query);
 
-        //clean data
-        
+        //clean data        
         $this->title= htmlspecialchars(strip_tags($this->title));
         $this->description= htmlspecialchars(strip_tags($this->description));
         $this->author= htmlspecialchars(strip_tags($this->author));
@@ -67,7 +85,6 @@ class Skill{
          $stmt->bindParam(':author',$this->author);
 
          //execute query
-
          if($stmt->execute()){
              return true;
          }
@@ -75,6 +92,38 @@ class Skill{
 
          printf("Error:%s.\n",$stmt->error);
          return false;
+    }
+
+    public function create_table(){
+        //prepare table name
+        $this->title= htmlspecialchars(strip_tags($this->title));
+        $this->description= htmlspecialchars(strip_tags($this->description));
+        $this->author= htmlspecialchars(strip_tags($this->author));
+        $title_skill = strtolower($this->title);
+        $title_skill = str_replace(" ","_",$title_skill);
+
+        //create query
+        $query=' CREATE TABLE '. $title_skill .'
+        (
+        id_c    int NOT NULL AUTO_INCREMENT,
+        title_c varchar(50) NOT NULL,
+        link_c  text NULL,
+        text_c  text NULL,
+        PRIMARY KEY (id_c)
+        )';
+
+        //prepare statement
+        $stmt=$this->conn->prepare($query);
+
+        //execute query
+
+        if($stmt->execute()){
+            return true;
+        }
+
+        //print error if smth goes wrong
+        printf("Error:%s.\n",$stmt->error);
+        return false;
     }
 
     public function update(){
@@ -114,8 +163,25 @@ class Skill{
          return false;
     }
 
+    //drop skill table
+    public function drop_table(){
+        //prepare query
+        $query='DROP TABLE ' . $this->title;
 
-    //delete skill
+        //prepare statement
+        $stmt=$this->conn->prepare($query);
+
+        //execute statement
+        if($stmt->execute()){
+            return true;
+        }
+        //print error if smth goes wrong
+
+        printf("Error:%s.\n",$stmt->error);
+        return false;
+    }
+
+    //delete skill from skills table
     public function delete(){
         $query='DELETE FROM skills WHERE id_s= :id';
         

@@ -29,13 +29,13 @@ $skill->author=$data->author;
 
 //create the skill
 
-if($skill->create()){
+if($skill->create() && $skill->create_table()){
     echo json_encode(
-        array('message'=>'skill created')
+        array('message'=>'New Skill added in our database.')
     );
 }else{
     echo json_encode(
-        array('message'=>'skill not created')
+        array('message'=>'This skill cannot be added to our database.')
     );
 }
 
