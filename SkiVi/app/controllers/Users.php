@@ -5,6 +5,7 @@ class Users extends Controller{
     }
 
     public function signup(){
+
         $data = [
             'username' =>'',
             'email' =>'',

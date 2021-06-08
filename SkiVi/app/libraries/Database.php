@@ -4,11 +4,15 @@
         private $statement;
         private $dbHandler;
         private $error;
+        private $host='localhost';
+        private $db_name='skivi';
+        private $username='root';
+        private $password='';
 
         public function __construct(){
-            $conn ='sqlite:C:\Users\cosmi\OneDrive\Desktop\facultate\sem2\tweb\SkiVi\app\SkiViDB';
+            //$conn ='sqlite:C:\Users\cosmi\OneDrive\Desktop\facultate\sem2\tweb\SkiVi\app\SkiViDB';
             try{
-                $this->dbHandler = new PDO($conn);
+                $this->dbHandler = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name, $this->username, $this->password);
             } catch (PDOException $e){
                 $this->error = $e->getMessage();
                 echo $this->error;

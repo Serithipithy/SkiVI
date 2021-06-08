@@ -19,11 +19,11 @@ class Pages extends Controller
     public function myaccount(){
         $this->view('pages/myaccount');
     }
-    public function signUp(){
-        $this->view('pages/signup');
-    }
-    public function login(){
-        $this->view('pages/login');
-    }
+    // public function signUp(){
+    //     $this->view('pages/signup');
+    // }
+    // public function login(){
+    //     $this->view('pages/login');
+    // }
 
 }
