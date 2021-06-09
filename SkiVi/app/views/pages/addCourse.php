@@ -40,7 +40,6 @@
         </nav>
     </header>
     <main class="addCourse">
-        <p id="message"></p>
         <div class="formular--box">
             <form>
                 <p class="title">Add a new Course</p>
