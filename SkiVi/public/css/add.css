@@ -1,0 +1,159 @@
+    main {
+        width: 100%;
+        height: 30em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .addCourse {
+        height: 60em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .Add--buttons {
+        text-decoration: none;
+        color: #f78888;
+        background-color: white;
+        position: relative;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        padding-right: 4em;
+        padding-left: 4em;
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
+        width: auto;
+        height: 1.3em;
+        font-size: 1.4em;
+        border-radius: 45px;
+    }
+    
+    .Add--buttons:hover {
+        color: white;
+        background-color: #000000;
+        box-shadow: 0px 10px 15px #f78888a6;
+    }
+    
+    .option {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-right: 6em;
+        padding-left: 6em;
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
+    }
+    
+    .formular--box {
+        background-color: white;
+        margin-top: 8%;
+        margin-bottom: 8%;
+        width: 500px;
+        height: 900px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .title {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+    
+    .explanation {
+        font-size: 1em;
+        color: grey;
+        font-weight: lighter;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    label {
+        align-self: flex-start;
+        font-size: 1em;
+        padding: 1em 1em 1em 4.5em;
+    }
+    
+    input {
+        /* align-self: flex-start; */
+        margin-bottom: 1em;
+        /* margin-left: 1em; */
+        width: 26em;
+        height: 2em;
+    }
+    
+    select {
+        font-family: "Montserrat", Sans-Serif;
+        width: 26em;
+        height: 2em;
+    }
+    
+    .content {
+        width: 26em;
+        height: 12em;
+    }
+    
+    button {
+        color: rgb(133, 133, 133);
+        background-color: white;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        padding-left: 2.5em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 2.5em;
+        border: none;
+        font-size: 1em;
+        border-radius: 45px;
+        margin-top: 2em;
+    }
+    
+    button:hover {
+        color: white;
+        background-color: black;
+        box-shadow: 0px 8px 15px #f78888a6;
+    }
+    
+    @media only screen and (max-width:500px) {
+        .formular--box {
+            width: 300px;
+            height: 700px;
+            margin-top: 3%;
+        }
+        .title {
+            font-size: 1.5em;
+        }
+        .explanation {
+            font-size: 0.5em;
+            font-weight: normal;
+        }
+        input {
+            width: 18.5em;
+        }
+        select {
+            width: 18.5em;
+        }
+        .content {
+            width: 18.5em;
+            height: 12em;
+        }
+    }
+    
+    @media only screen and (max-width:750px) {
+        .Add--buttons {
+            /* top: -5em; */
+            font-size: 1em;
+        }
+    }
+    
+    @media only screen and (max-width:450px) {
+        .Add--buttons {
+            /* word-wrap: break-word; */
+            font-size: 0.8em;
+            padding-right: 2em;
+            padding-left: 2em;
+        }
+    }

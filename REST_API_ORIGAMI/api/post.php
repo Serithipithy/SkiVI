@@ -17,16 +17,28 @@ $db = $database->connect();
   
 $course = new Origami($db);
   
+$data=[
+    'title'=>'',
+    'link'=>'',
+    'text'=>''
+];
+
 // get posted data
-$data = json_decode(file_get_contents("php://input"));
+//$data = json_decode(file_get_contents("php://input"));
+
+$data=[
+    'title'=>trim($_POST['title']),
+    'link'=>trim($_POST['link']),
+    'text'=>trim($_POST['text'])
+];
 
 // make sure data is not empty
-if(!empty($data->title) &&(!empty($data->link) || !empty($data->text))){
+if(!empty($data['title']) &&(!empty($data['link']) || !empty($data['text']))){
 
     // set course property values
-    $course->title=$data->title;
-    $course->link=$data->link;
-    $course->text=$data->text;
+    $course->title=$data['title'];
+    $course->link=$data['link'];
+    $course->text=$data['text'];
 
     // create the course
     if($course->createCourse()){
