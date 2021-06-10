@@ -21,10 +21,11 @@
             <div class="openMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
             <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
-                <li><a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a></li>
-                <li><a href="<?php echo URLROOT;?>/users/signup">Sign Up</a></li>
-                <li><a href="<?php echo URLROOT;?>/users/login">Log In</a></li>
-                <li class="closeMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/close-button.png" alt="close button"></li>
+            <li><a href="<?php echo URLROOT;?>/pages/addCourse">Add Course</a></li>
+            <li><a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a></li>
+            <li><a href="<?php echo URLROOT;?>/users/signup">Sign Up</a></li>
+            <li><a href="<?php echo URLROOT;?>/users/login">Log In</a></li>
+            <li class="closeMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>
     </header>

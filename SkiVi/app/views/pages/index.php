@@ -21,6 +21,11 @@
                 <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
                 <li><a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a></li>
                 <li>
+                <?php if(isset($_SESSION['user_id'])) : ?>
+                    <a href="<?php echo URLROOT;?>/pages/addCourse">Add Course</a>
+                <?php endif; ?>
+                </li>
+                <li>
                     <?php if(!isset($_SESSION['user_id'])) : ?>
                     <a href="<?php echo URLROOT;?>/users/signup">Sign Up</a>
                     <?php endif; ?>
