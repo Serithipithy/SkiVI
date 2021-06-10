@@ -44,6 +44,7 @@
             <form>
                 <p class="title">Add a new Course</p>
                 <p class="explanation">Here you can add a new course to an already existing skill</p>
+                <p class="explanation position" id="statusText"></p>
                 <label>Skill name</label>
                 <select name="skill_name" id="skill_name">
                     <option value="">--Please choose an option--</option>
@@ -59,7 +60,7 @@
                 <label>Course Content(text)</label>
                 <textarea class="content" id="text" placeholder="Course Content"></textarea>
                 <!-- <input class="content" type="text" placeholder="Course Content" name='content'> -->
-                <button id="submit" value="submit">Submit</button>
+                <button id="submit" value="submit" type="button">Submit</button>
             </form>
         </div>
     </main>

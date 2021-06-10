@@ -8,7 +8,7 @@
     }
     
     .addCourse {
-        height: 60em;
+        height: 63em;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -58,6 +58,14 @@
     .title {
         font-size: 2em;
         font-weight: bolder;
+    }
+    
+    p.position{
+        font-size: 1em;
+        color: grey;
+        font-weight: bolder;
+        margin-top: 0em;
+        margin-bottom: 0em;
     }
     
     .explanation {
