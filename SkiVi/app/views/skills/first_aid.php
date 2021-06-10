@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivi2.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/header.css" type="text/css">
-    <title>SkiVi | Home</title>
+    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivi2.css">
+    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skiviskill.css">
+    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/header.css">
+    <title>Learn a Skill</title>
 </head>
 
 <body>
@@ -18,7 +20,7 @@
             <div><img class="logo" src="<?php echo STYLEROOT;?>/assets/img/logo.png" alt="logo"></div>
             <div class="openMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
-                <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
+            <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
                 <li><a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a></li>
                 <li>
                 <?php if(isset($_SESSION['user_id'])) : ?>
@@ -45,50 +47,62 @@
 
     <main>
         <a href="#" class="to-top">Back to top</a>
-        <div class="image--slides">
-            <img class="image-in-slide" src="<?php echo STYLEROOT;?>/assets/img/bg-image3.jpg" alt="a man reading a book">
-            <div class="over--image--slides">
-                <a href="#learning--plans" class="button--middle">Get Started!</a>
+        <div class="title">
+            <h1>Title</h1>
+        </div>
+        <div class="course--details">
+
+            <div class="course--description--image">
+                <img class="course--img" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="man reading">
+                <div class="course--description">
+                    <h2>Course Description</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+            </div>
+            <div class="course--content--needs">
+                <div class="course--content">
+                    <h2>This Course Contains</h2>
+                    <ul>
+                        <li> 10 ore de viziorane</li>
+                        <li>40 de videoclipuri </li>
+                        <li>10 lectii pentru acasa:))</li>
+                    </ul>
+                </div>
+                <div class="course--content">
+                    <h2>For this course you will need</h2>
+                    <ul>
+                        <li>ceva</li>
+                        <li>altceva</li>
+                        <li>nu stiu </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <section id="learning--plans">
+        <!-- <button class="button--middle">Get Courses</button> -->
+        <div class="courses">
+            <?php
+               
+            ?>
+            <div class="dropdowns">
+                <div class="dropbtn--course">
+                    <h2>Course 1</h2> 
+                </div>
+                <div id="course--dropdown">
+                    <div class="drop--bg">
+                        <iframe allow="fullscreen" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>
+                        <p class="course--txt"> <img src="<?php echo STYLEROOT;?>/assets/img/exclamation.png" alt="exclamation" class="info"> After you finish the course please click the "Done" button from the right.</p>
+                        <button class="btn--done" type="submit"> Done </button>
+                    </div>
+                </div>
+             </div>
 
-            <h1>Choose your plan</h1>
-            <div>
-                <h2>Train yourself</h2>
-            </div>
-            <div class="skills">
-                <div class="skill">
-                    <a href="<?php echo URLROOT;?>skill.html"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="skill1"></a>
-                    <h2>Titlu</h2>
-                    <p class="skill--info">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                </div>
-                <div class="skill">
-                    <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="skill2">
-                    <h2>Titlu</h2>
-                    <p class="skill--info">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                </div>
-                <div class="skill">
-                    <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="skill3">
-                    <h2>Titlu</h2>
-                    <p class="skill--info">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                </div>
-            </div>
-
-        </section>
+        </div>
 
     </main>
-
-
     <footer id="contact">
         <div class="footer--contact">
             <div class="mail--creators"> Contact creators </div>
@@ -107,6 +121,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
     <script src="<?php echo STYLEROOT;?>/js/navbar.js"></script>
+    <script src="<?php echo STYLEROOT;?>/js/script-skill.js"></script>
 
 
 </body>
