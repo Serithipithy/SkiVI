@@ -22,9 +22,7 @@
             <ul class="mainMenu">
             <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
             <li><a href="<?php echo URLROOT;?>/skills/addCourse">Add Course</a></li>
-            <li><a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a></li>
-            <li><a href="<?php echo URLROOT;?>/users/signup">Sign Up</a></li>
-            <li><a href="<?php echo URLROOT;?>/users/login">Log In</a></li>
+            <li><a href="<?php echo URLROOT;?>/users/logout">Log Out</a></li>
             <li class="closeMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/close-button.png" alt="close button"></li>
             </ul>
         </nav>
@@ -40,10 +38,10 @@
         <div class="account--container">
             <div class="account--profile">
                 <img src="<?php echo STYLEROOT;?>/assets/img/profile-picture.jpg" alt="profile picture" class="profile--picture" />
-                <p class="account--username">YourUsername</p>
+                <p class="account--username"><?php echo $_SESSION['username'];?></p>
             </div>
             <form>
-                <p class="account--mail">Youremailhere@gmail.com</p>
+                <p class="account--mail"><?php echo $_SESSION['email'];?></p>
                 <input type="text" placeholder="New username...">
                 <input type="password" placeholder="Change password...">
                 <input type="password" placeholder="Confirm password...">
