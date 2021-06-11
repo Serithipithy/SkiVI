@@ -31,7 +31,7 @@
                 </li>
                 <li>
                 <?php if(isset($_SESSION['user_id'])) : ?>
-                    <a href="<?php echo URLROOT;?>/pages/addCourse">Add Course</a>
+                    <a href="<?php echo URLROOT;?>/skills/addCourse">Add Course</a>
                 <?php endif; ?>
                 </li>
                 <li>
