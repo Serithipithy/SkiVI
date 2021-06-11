@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivi2.css">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skiviskill.css">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/header.css">
-    <title>First Aid | SkiVi</title>
+    <title>Origami | SkiVi</title>
 </head>
 
 <body>
@@ -61,7 +61,8 @@
                 <div class="course--description">
                     <h2>Course Description</h2>
                     <p>
-                    First aid is the first and immediate assistance given to any person suffering from either a minor or serious illness or injury, with care provided to preserve life, prevent the condition from worsening, or to promote recovery. ... First aid is generally performed by someone with basic medical training.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
             </div>

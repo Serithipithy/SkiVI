@@ -68,31 +68,30 @@
             </div>
             <div class="skills">
                 <div class="skill">
-                    <a href="<?php echo URLROOT;?>/skills/first_aid"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="skill1"></a>
+                    <a href="<?php echo URLROOT;?>/skills/first_aid"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="First Aid image"></a>
                     <h2>Titlu</h2>
                     <p class="skill--info">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    First aid is the first and immediate assistance given to any person suffering from either a minor or serious illness or injury, with care provided to preserve life, prevent the condition from worsening, or to promote recovery. ... First aid is generally performed by someone with basic medical training.
                     </p>
                     <a href="<?php echo URLROOT;?>/skills/first_aid" class="buttons--skill">Start learning</a>
                 </div>
                 <div class="skill">
-                    <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="skill2">
+                <a href="<?php echo URLROOT;?>/skills/origami"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="Origami image"></a>
                     <h2>Titlu</h2>
                     <p class="skill--info">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
-                    <a href="<?php echo URLROOT;?>/skill.html" class="buttons--skill">Start learning</a>
+                    <a href="<?php echo URLROOT;?>/skills/origami" class="buttons--skill">Start learning</a>
                 </div>
                 <div class="skill">
-                    <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="skill3">
+                <a href="<?php echo URLROOT;?>/skills/sign_language"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="Sign Language image"></a>
                     <h2>Titlu</h2>
                     <p class="skill--info">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
-                    <a href="<?php echo URLROOT;?>/skill.html" class="buttons--skill">Start learning</a>
+                    <a href="<?php echo URLROOT;?>/skills/sign_language" class="buttons--skill">Start learning</a>
                 </div>
             </div>
 
