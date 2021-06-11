@@ -83,23 +83,40 @@
         </div>
         <!-- <button class="button--middle">Get Courses</button> -->
         <div class="courses">
-            <?php
-               
-            ?>
-            <div class="dropdowns">
-                <div class="dropbtn--course">
-                    <h2>Course 1</h2> 
-                </div>
-                <div id="course--dropdown">
-                    <div class="drop--bg">
-                        <iframe allow="fullscreen" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                        </iframe>
-                        <p class="course--txt"> <img src="<?php echo STYLEROOT;?>/assets/img/exclamation.png" alt="exclamation" class="info"> After you finish the course please click the "Done" button from the right.</p>
-                        <button class="btn--done" type="submit"> Done </button>
-                    </div>
-                </div>
-             </div>
+         
+        <?php
+        $size=count($data);
+               for($i=0;$i<$size ;$i++){ 
+               echo' <div class="dropdowns">
+                    <div class="dropbtn--course">
+                   <h2>';
+              echo $data[$i][0]; 
+                   echo'</h2></div>
+                   <div id="course--dropdown">
+                   <div class="drop--bg">';
+                  
+                   if($data[$i][1]!=null){
+                       echo'<iframe allow="fullscreen" src="';
+                       echo $data[$i][1];
+                       echo'">
+                       </iframe>';
+                   }
+                   if($data[$i][2]!=null){ 
+                        echo'<p class="course--txt">';
+                        echo $data[$i][2] ;
+                        echo'</p>';
+                   }
+                  echo' <p class="course--txt"> <img src="';
+                  echo STYLEROOT;
+                  echo'/assets/img/exclamation.png" alt="exclamation" class="info"> After you finish the course please click the "Done" button from the right.</p>
+                   <button class="btn--done" type="submit"> Done </button>
+               </div>
+           </div>
+        </div>';
 
+         }
+            ?>
+          
         </div>
 
     </main>
