@@ -69,7 +69,7 @@ class SignLng{
 
     public function getCourses(){
         //create query
-        $query='SELECT *  FROM courses ';
+        $query='SELECT title, link, text  FROM courses ORDER BY data ASC';
 
         // prepare statement
         $stmt=$this->conn->prepare($query);

@@ -28,11 +28,11 @@ class FirstAid{
         $this->link=htmlspecialchars(strip_tags($this->link));
         $this->text=htmlspecialchars(strip_tags($this->text));
 
+        
         // bind values
         $stmt->bindParam(":title", $this->title);
         $stmt->bindParam(":link", $this->link);
         $stmt->bindParam(":text", $this->text);
-
 
         //execute query
         if($stmt->execute()){
@@ -69,7 +69,7 @@ class FirstAid{
 
     public function getCourses(){
         //create query
-        $query='SELECT *  FROM courses ';
+        $query='SELECT title, link, text  FROM courses ORDER BY data ASC';
 
         // prepare statement
         $stmt=$this->conn->prepare($query);
