@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivi2.css" type="text/css">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/header.css" type="text/css">
+    <style>
+    a    {
+        text-decoration:none;
+        }
+</style>
     <title>SkiVi | Home</title>
 </head>
 
@@ -22,7 +27,7 @@
                 <li><a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a></li>
                 <li>
                 <?php if(isset($_SESSION['user_id'])) : ?>
-                    <a href="<?php echo URLROOT;?>/skills/addCourse">Add Course</a>
+                    <a href="<?php echo URLROOT;?>/pages/addCourse">Add Course</a>
                 <?php endif; ?>
                 </li>
                 <li>
@@ -65,6 +70,7 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
+                    <a href="<?php echo URLROOT;?>/skill.html" class="buttons--skill">Start learning</a>
                 </div>
                 <div class="skill">
                     <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="skill2">
@@ -73,6 +79,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
+                    <a href="<?php echo URLROOT;?>/skill.html" class="buttons--skill">Start learning</a>
                 </div>
                 <div class="skill">
                     <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="skill3">
@@ -81,6 +88,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
+                    <a href="<?php echo URLROOT;?>/skill.html" class="buttons--skill">Start learning</a>
                 </div>
             </div>
 

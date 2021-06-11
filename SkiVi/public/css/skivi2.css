@@ -125,6 +125,21 @@ div {
     border-radius: 45px;
     top: -7em;
 }
+.buttons--skill{
+    color: darkslategrey;
+    background-color: white;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    width: auto;
+    height: 1.3em;
+    font-size: 1.2em;
+    /* border-radius: 45px; */
+    margin-top: 1em;
+    -webkit-text-stroke-width: thin;
+}
 
 .buttons:hover {
     background-color: #f78888;
@@ -141,6 +156,12 @@ div {
     color: white;
     background-color: #000000;
     box-shadow: 0px 10px 15px #f78888a6;
+}
+
+.buttons--skill:hover{
+    color: white;
+    background-color: #000000;
+    box-shadow: 0px 5px 10px #f78888a6;
 }
 
 main {
@@ -343,6 +364,7 @@ h5 {
     width: 5em;
     height: auto;
 }
+
 
 @media only screen and (max-width:800px) {
     .dropbtn {
