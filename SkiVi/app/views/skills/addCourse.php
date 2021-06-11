@@ -81,6 +81,7 @@
     </section>
 
 
+    <script src="<?php echo STYLEROOT;?>/js/password.js"></script>
     <script src="<?php echo STYLEROOT;?>/js/navbar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="<?php echo STYLEROOT;?>/js/action.js"></script>
