@@ -5,14 +5,11 @@ $(document).ready(function() {
         var skillname = $("#skill_name").val();
         var title = $("#course_title").val();
         //console.log(res);
-        var sendMessage = '{ "title":"' + title + '" }';
-        var obj = JSON.parse(JSON.stringify(sendMessage));
-        console.log(obj);
+
         if (skillname.localeCompare("skill1") == 0) {
             $.ajax({
                 type: 'DELETE',
-                url: "http://localhost:8000/REST_API_FA/api/delete.php",
-                data: obj,
+                url: 'http://localhost:8000/REST_API_FA/api/delete.php?title='+ title,
                 error: function(e) {
                     console.log(e);
                 },
@@ -30,8 +27,7 @@ $(document).ready(function() {
         if (skillname.localeCompare("skill2") == 0) {
             $.ajax({
                 type: 'DELETE',
-                url: "http://localhost:8000/REST_API_ORIGAMI/api/delete.php",
-                data: obj,
+                url: 'http://localhost:8000/REST_API_ORIGAMI/api/delete.php?title='+ title,
                 error: function(e) {
                     console.log(e);
                 },
@@ -49,8 +45,7 @@ $(document).ready(function() {
         if (skillname.localeCompare("skill3") == 0) {
             $.ajax({
                 type: 'DELETE',
-                url: "http://localhost:8000/REST_API_SIGN_LNG/api/delete.php",
-                data: obj,
+                url: 'http://localhost:8000/REST_API_SIGN_LNG/api/delete.php?title='+ title,
                 error: function(e) {
                     console.log(e);
                 },
