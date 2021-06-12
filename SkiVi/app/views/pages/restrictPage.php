@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivi2.css" type="text/css">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/header.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/add.css" type="text/css">
-    <title>SkiVi | Add</title>
+    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/restrict.css" type="text/css">
+    <style>
+</style>
+    <title>SkiVi | Home</title>
 </head>
 
 <body>
@@ -22,7 +22,16 @@
             <div class="openMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
                 <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
-                <li><a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a></li>
+                <li>
+                    <?php if(isset($_SESSION['user_id'])) : ?>
+                    <a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a>
+                    <?php endif; ?>
+                </li>
+                <li>
+                <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'yes') : ?>
+                    <a href="<?php echo URLROOT;?>/skills/modify">Modify</a>
+                <?php endif; ?>
+                </li>
                 <li>
                     <?php if(!isset($_SESSION['user_id'])) : ?>
                     <a href="<?php echo URLROOT;?>/users/signup">Sign Up</a>
@@ -30,9 +39,9 @@
                 </li>
                 <li>
                     <?php if(isset($_SESSION['user_id'])) : ?>
-                    <a href="<?php echo URLROOT;?>/users/logout">Log Out</a>
+                        <a href="<?php echo URLROOT;?>/users/logout">Log Out</a>
                     <?php else : ?>
-                    <a href="<?php echo URLROOT;?>/users/login">Log In</a>
+                        <a href="<?php echo URLROOT;?>/users/login">Log In</a>
                     <?php endif; ?>
                 </li>
                 <li class="closeMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/close-button.png" alt="close button"></li>
@@ -40,15 +49,14 @@
         </nav>
     </header>
     <main>
-        <!-- aici punem butoanele :) -->
 
-        <a href="<?php echo URLROOT;?>/skills/addCourse" class="Add--buttons">Add a new Course to a Skill</a>
-        <div  class="option"></div>
-        <a href="<?php echo URLROOT;?>/skills/updateCourse" class="Add--buttons">Update a new Course to a Skill</a>
-        <div  class="option"></div>
-        <a href="<?php echo URLROOT;?>/skills/deleteCourse" class="Add--buttons">Delete a Course from a Skill</a>
-
+    <section class="main">
+        <h1 class="restrictMessage">404 YOU ARE NOT ALLOWED TO ACCESS THIS PAGE!</h1>
+        <h2 class="serverMessage"><?php echo $data;?></h2>
+    </section>
+    
     </main>
+
     <footer id="contact">
         <div class="footer--contact">
             <div class="mail--creators"> Contact creators </div>
@@ -65,7 +73,10 @@
         <h5>Web Technologies project | 2021</h5>
     </section>
 
+
     <script src="<?php echo STYLEROOT;?>/js/navbar.js"></script>
+
+
 </body>
 
 </html>

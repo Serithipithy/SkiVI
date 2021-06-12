@@ -27,7 +27,7 @@
                     <?php endif; ?>
                 </li>
                 <li>
-                <?php if(isset($_SESSION['user_id'])) : ?>
+                <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'yes') : ?>
                     <a href="<?php echo URLROOT;?>/skills/modify">Modify</a>
                 <?php endif; ?>
                 </li>

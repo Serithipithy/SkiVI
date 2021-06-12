@@ -71,7 +71,7 @@ class Users extends Controller{
                         //Redirect to the login page
                         header('location: ' . URLROOT . '/users/login');
                     } else {
-                        die('Somthing went wrong.');
+                        die('Something went wrong.');
                     }
             }
         }
@@ -139,6 +139,7 @@ class Users extends Controller{
         $_SESSION['user_id'] = $user->user_id;
         $_SESSION['username'] = $user->user_name;
         $_SESSION['email'] = $user->user_email;
+        $_SESSION['admin'] = $user->admin;
     
         header('location: ' . URLROOT . '/pages/index');
         
@@ -148,6 +149,7 @@ class Users extends Controller{
         unset($_SESSION['user_id']);
         unset($_SESSION['username']);
         unset($_SESSION['email']);
+        unset($_SESSION['admin']);
         header('location:' . URLROOT . '/users/login');
     }
 }
