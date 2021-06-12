@@ -3,24 +3,15 @@ $(document).ready(function() {
     $("#submit").click(function() {
 
         var skillname = $("#skill_name").val();
-        var title = $("#title").val();
-        var link = $("#link").val();
-        var text = $("#text").val();
-        var string = link;
-        var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-        console.log(res);
-        if (res !== null) {
-            var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
-        } else {
-            link = "";
-            var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
-        }
+        var title = $("#course_title").val();
+        //console.log(res);
+        var sendMessage = '{ "title":"' + title + '" }';
         var obj = JSON.parse(JSON.stringify(sendMessage));
         console.log(obj);
         if (skillname.localeCompare("skill1") == 0) {
             $.ajax({
-                type: 'POST',
-                url: "http://localhost:8000/REST_API_FA/api/post.php",
+                type: 'DELETE',
+                url: "http://localhost:8000/REST_API_FA/api/delete.php",
                 data: obj,
                 error: function(e) {
                     console.log(e);
@@ -32,16 +23,14 @@ $(document).ready(function() {
 
                     $("#skill_name").val("");
                     $("#title").val("");
-                    $("#link").val("");
-                    $("#text").val("");
                     $("#statusText").html(e.message);
                 }
             });
         }
         if (skillname.localeCompare("skill2") == 0) {
             $.ajax({
-                type: 'POST',
-                url: "http://localhost:8000/REST_API_ORIGAMI/api/post.php",
+                type: 'DELETE',
+                url: "http://localhost:8000/REST_API_ORIGAMI/api/delete.php",
                 data: obj,
                 error: function(e) {
                     console.log(e);
@@ -53,16 +42,14 @@ $(document).ready(function() {
 
                     $("#skill_name").val("");
                     $("#title").val("");
-                    $("#link").val("");
-                    $("#text").val("");
                     $("#statusText").html(e.message);
                 }
             });
         }
         if (skillname.localeCompare("skill3") == 0) {
             $.ajax({
-                type: 'POST',
-                url: "http://localhost:8000/REST_API_SIGN_LNG/api/post.php",
+                type: 'DELETE',
+                url: "http://localhost:8000/REST_API_SIGN_LNG/api/delete.php",
                 data: obj,
                 error: function(e) {
                     console.log(e);
@@ -74,8 +61,6 @@ $(document).ready(function() {
 
                     $("#skill_name").val("");
                     $("#title").val("");
-                    $("#link").val("");
-                    $("#text").val("");
                     $("#statusText").html(e.message);
                 }
             });

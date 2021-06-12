@@ -19,17 +19,6 @@ class Pages extends Controller
     public function myaccount(){
         $this->view('pages/myaccount');
     }
-    public function addCourse(){
-        $this->view('skills/addCourse');
-    }
-    public function first_aid(){
-        $this->view('skills/first_aid');
-    }
-    public function origami(){
-        $this->view('skills/origami');
-    }
-    public function sign_language(){
-        $this->view('skills/sign_language');
-    }
+   
 
 }

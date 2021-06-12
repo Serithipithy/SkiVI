@@ -21,7 +21,7 @@
             <div class="openMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
             <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
-            <li><a href="<?php echo URLROOT;?>/skills/addCourse">Add Course</a></li>
+            <li><a href="<?php echo URLROOT;?>/skills/modify">Modify</a></li>
             <li><a href="<?php echo URLROOT;?>/users/logout">Log Out</a></li>
             <li class="closeMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/close-button.png" alt="close button"></li>
             </ul>

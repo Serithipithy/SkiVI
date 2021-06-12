@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#submit").click(function() {
 
         var skillname = $("#skill_name").val();
-        var title = $("#title").val();
+        var title = $("#course_title").val();
         var link = $("#link").val();
         var text = $("#text").val();
         var string = link;
@@ -19,8 +19,8 @@ $(document).ready(function() {
         console.log(obj);
         if (skillname.localeCompare("skill1") == 0) {
             $.ajax({
-                type: 'POST',
-                url: "http://localhost:8000/REST_API_FA/api/post.php",
+                type: 'PUT',
+                url: "http://localhost:8000/REST_API_FA/api/put.php",
                 data: obj,
                 error: function(e) {
                     console.log(e);
@@ -40,8 +40,8 @@ $(document).ready(function() {
         }
         if (skillname.localeCompare("skill2") == 0) {
             $.ajax({
-                type: 'POST',
-                url: "http://localhost:8000/REST_API_ORIGAMI/api/post.php",
+                type: 'PUT',
+                url: "http://localhost:8000/REST_API_ORIGAMI/api/put.php",
                 data: obj,
                 error: function(e) {
                     console.log(e);
@@ -61,8 +61,8 @@ $(document).ready(function() {
         }
         if (skillname.localeCompare("skill3") == 0) {
             $.ajax({
-                type: 'POST',
-                url: "http://localhost:8000/REST_API_SIGN_LNG/api/post.php",
+                type: 'PUT',
+                url: "http://localhost:8000/REST_API_SIGN_LNG/api/put.php",
                 data: obj,
                 error: function(e) {
                     console.log(e);

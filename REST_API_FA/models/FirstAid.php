@@ -100,24 +100,24 @@ class FirstAid{
     }
 
     public function delete(){
-        // delete query
-        $query = "DELETE FROM " . $this->table . " WHERE title = ?";
+         // delete query
+         $query = "DELETE FROM " . $this->table . " WHERE title =:title";
     
-        // prepare query
-        $stmt = $this->conn->prepare($query);
-    
-        // sanitize
-        $this->title=htmlspecialchars(strip_tags($this->title));
-    
-        // bind id of record to delete
-        $stmt->bindParam(1, $this->title);
-    
-        // execute query
-        if($stmt->execute()){
-            return true;
-        }
-    
-        return false;
-        }
+         // prepare query
+         $stmt = $this->conn->prepare($query);
+     
+         // sanitize
+         $this->title=htmlspecialchars(strip_tags($this->title));
+     
+         // bind id of record to delete
+         $stmt->bindParam(":title", $this->title);
+     
+         // execute query
+         if($stmt->execute()){
+             return true;
+         }
+
+         return false;
+         }
 
 }

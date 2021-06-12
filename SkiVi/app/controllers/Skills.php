@@ -37,5 +37,14 @@ class Skills extends Controller
 
         $this->view('skills/addCourse');
     }
+    public function modify(){
+        $this->view('skills/modify');
+    }
+    public function updateCourse(){
+        $this->view('skills/updateCourse');
+    }
+    public function deleteCourse(){
+        $this->view('skills/deleteCourse');
+    }
 
 }

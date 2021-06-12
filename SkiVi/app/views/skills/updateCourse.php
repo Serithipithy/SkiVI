@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivi2.css" type="text/css">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/header.css" type="text/css">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/add.css" type="text/css">
-    <title>SkiVi | Add</title>
+    <title>SkiVi | Update</title>
 </head>
 
 <body>
@@ -42,24 +42,24 @@
     <main class="addCourse">
         <div class="formular--box">
             <form>
-                <p class="title">Add a new Course</p>
-                <p class="explanation">Here you can add a new course to an already existing skill</p>
+                <p class="title">Update a Course</p>
+                <p class="explanation">Here you can update a course</p>
                 <p class="explanation position" id="statusText"></p>
                 <label>Skill name</label>
-                <select name="skill_name" id="skill_name">
+                <select name="skill_name" id="skill_name" onchange="choosenSkill()">
                     <option value="">--Please choose a skill--</option>
                     <option value="skill1">First Aid</option>
                     <option value="skill2">Origami</option>
                     <option value="skill3">Sign Language</option>
                 </select>
-                <!-- <input type="text" placeholder="Skill name" name='skill_name'> -->
                 <label>Course title</label>
-                <input type="text" placeholder="Course title" id="title">
+                <select name="course_title" id="course_title">
+                    <option value="">--Please choose a course--</option>
+                </select>
                 <label>Video link(if there is any)</label>
                 <input type="text" placeholder="Video link" id="link">
                 <label>Course Content(text)</label>
                 <textarea class="content" id="text" placeholder="Course Content"></textarea>
-                <!-- <input class="content" type="text" placeholder="Course Content" name='content'> -->
                 <button id="submit" value="submit" type="button">Submit</button>
             </form>
         </div>
@@ -84,7 +84,8 @@
 
     <script src="<?php echo STYLEROOT;?>/js/navbar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="<?php echo STYLEROOT;?>/js/action.js"></script>
+    <script src="<?php echo STYLEROOT;?>/js/updateOptions.js"></script>
+    <script src="<?php echo STYLEROOT;?>/js/update.js"></script>
 </body>
 
 </html>
