@@ -2,6 +2,7 @@
 class Users extends Controller{
     public function __construct(){
         $this->userModel = $this->model('User');
+        $this->skillModel = $this->model('Skill');
     }
 
     public function signup(){
@@ -139,7 +140,21 @@ class Users extends Controller{
             header('location:' . URLROOT . '/pages/restrictPage');
         }
         else{
-            $data=$this->changePassword();            
+            $data = [
+                'username' =>'',
+                'currentPassword' => '',
+                'newPassword'=>'',
+                'confirmPassword'=>'',
+                'currentPasswordError'=>'',
+                'newPasswordError' => '',
+                'confirmPasswordError' => '',
+                'succesMessage'=>'',
+                'progress-firstAid'=>'',
+                'progress-origami'=>'',
+                'progress-signLanguage'=>'',
+            ];
+            $data=$this->changePassword();
+            $data=$this->setProgress($data);
             $this->view('users/myaccount',$data);
         }
     }
@@ -152,7 +167,10 @@ class Users extends Controller{
             'currentPasswordError'=>'',
             'newPasswordError' => '',
             'confirmPasswordError' => '',
-            'succesMessage'=>''
+            'succesMessage'=>'',
+            'progress-firstAid'=>'',
+            'progress-origami'=>'',
+            'progress-signLanguage'=>'',
         ];
 
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -209,6 +227,21 @@ class Users extends Controller{
 
     }
 
+    public function setProgress($data){
+        $content_FA=$this->skillModel->getCoursesFA();
+        $content_Origami=$this->skillModel->getCoursesOrigami();
+        $content_SignLng=$this->skillModel->getCoursesSignLng();
+
+        $nr_FA=count($content_FA);
+        $nr_Origami=count($content_Origami);
+        $nr_SignLng=count($content_SignLng);
+
+        $data['progress-firstAid']=intVal(($this->userModel->getCount($_SESSION['user_id'],'first_aid')*100)/$nr_FA);
+        $data['progress-origami']=intVal(($this->userModel->getCount($_SESSION['user_id'],'origami')*100)/$nr_Origami);
+        $data['progress-signLanguage']=intVal(($this->userModel->getCount($_SESSION['user_id'],'sign_lng')*100)/$nr_SignLng);
+
+        return $data;
+    }
     public function createUserSession($user){
         session_start();
         $_SESSION['user_id'] = $user->user_id;

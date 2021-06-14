@@ -72,45 +72,51 @@
                     <h2>First aid</h2>
                     <div class="progress--status">
                         <p>Progress</p>
-                        <progress id="file1" max="100" value="70">70%</progress>
+                        <progress id="first--aid--progress" max="100" value=<?php echo $data['progress-firstAid'];?>></progress>
+                        <p><?php echo $data['progress-firstAid'];?>%</p>
                     </div>
                     <div class="last---watched">
-                        <p>Last video watched: </p> <a href="https://www.youtube.com/watch?v=bSqHJaGyC_A" class="link">Title last video watched</a>
-                    </div>
-                    <img src="<?php echo STYLEROOT;?>/assets/img/play-button.png" alt="play" class="play-pause--button" />
-                    <img src="<?php echo STYLEROOT;?>/assets/img/pause-button.png" alt="play" class="play-pause--button" />
+                        <p>Go to Skill page </p> 
+                        <a href="<?php echo URLROOT;?>/skills/first_aid" class="link">
+                        <img src="<?php echo STYLEROOT;?>/assets/img/play-button.png" alt="play" class="play-pause--button" />
+                        </a>
+                    </div> 
                 </div>
                 <img src="<?php echo STYLEROOT;?>/assets/img/skill1.jpg" alt="skill 1 imagine" class="skill--image" />
             </div>
 
             <div class="skill--stats">
                 <div class="skill--container">
-                    <h2>Wine tasting</h2>
+                    <h2>Origami</h2>
                     <div class="progress--status">
                         <p>Progress</p>
-                        <progress id="file2" max="100" value="38">38%</progress>
+                        <progress id="origami--progress" max="100" value=<?php echo $data['progress-origami'];?>></progress>
+                        <p><?php echo $data['progress-origami'];?>%</p>
                     </div>
                     <div class="last---watched">
-                        <p>Last video watched: </p> <a href="https://www.youtube.com/watch?v=bSqHJaGyC_A" class="link">Title last video watched</a>
+                        <p>Go to Skill page </p>
+                        <a href="<?php echo URLROOT;?>/skills/origami" class="link">
+                        <img src="<?php echo STYLEROOT;?>/assets/img/play-button.png" alt="play" class="play-pause--button" />
+                        </a>
                     </div>
-                    <img src="<?php echo STYLEROOT;?>/assets/img/play-button.png" alt="play" class="play-pause--button" />
-                    <img src="<?php echo STYLEROOT;?>/assets/img/pause-button.png" alt="play" class="play-pause--button" />
                 </div>
                 <img src="<?php echo STYLEROOT;?>/assets/img/skill2.jpg" alt="skill 1 imagine" class="skill--image" />
             </div>
 
             <div class="skill--stats">
                 <div class="skill--container">
-                    <h2>Flight attendant</h2>
+                    <h2>Sign Language</h2>
                     <div class="progress--status">
                         <p>Progress</p>
-                        <progress id="file3" max="100" value="91">91%</progress>
+                        <progress id="sign--language--progress" max="100" value=<?php echo $data['progress-signLanguage'];?>></progress>
+                        <p><?php echo $data['progress-signLanguage'];?>%</p>
                     </div>
                     <div class="last---watched">
-                        <p>Last video watched: </p> <a href="https://www.youtube.com/watch?v=bSqHJaGyC_A" class="link">Title last video watched</a>
+                        <p>Go to Skill page </p>
+                        <a href="<?php echo URLROOT;?>/skills/sign_language" class="link">
+                        <img src="<?php echo STYLEROOT;?>/assets/img/play-button.png" alt="play" class="play-pause--button" />
+                        </a>
                     </div>
-                    <img src="<?php echo STYLEROOT;?>/assets/img/play-button.png" alt="play" class="play-pause--button" />
-                    <img src="<?php echo STYLEROOT;?>/assets/img/pause-button.png" alt="play" class="play-pause--button" />
                 </div>
                 <img src="<?php echo STYLEROOT;?>/assets/img/skill3.jpg" alt="skill 1 imagine" class="skill--image" />
             </div>

@@ -152,6 +152,8 @@ p {
 .play-pause--button {
     height: 1.5em;
     margin-right: 1em;
+    position: relative;
+    top: 0.5em;
 }
 
 .skill--stats {

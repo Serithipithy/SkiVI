@@ -59,4 +59,26 @@ class UserInfo{
         return false;
 
     }
+
+    public function getNoCoursesBySkill(){
+        // select query
+        $query = "SELECT * FROM " . $this->table . " WHERE user_id = :user_id and skill = :skill";
+
+        // prepare query
+        $stmt = $this->conn->prepare($query);
+
+        // sanitize
+        $this->user_id=htmlspecialchars(strip_tags($this->user_id));
+        $this->skill=htmlspecialchars(strip_tags($this->skill));
+
+        // bind id of record to select
+        $stmt->bindParam(":user_id", $this->user_id);
+        $stmt->bindParam(":skill", $this->skill);
+
+        // execute query
+        $stmt->execute();
+        
+        return $stmt->rowCount();
+
+    }
 }
