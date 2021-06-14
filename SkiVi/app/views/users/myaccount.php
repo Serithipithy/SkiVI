@@ -40,10 +40,21 @@
         </section>
 
         <div class="account--container">
+
+        
             <div class="account--profile">
-                <img src="<?php echo STYLEROOT;?>/assets/img/profile-picture.jpg" alt="profile picture" class="profile--picture" />
+                <img src="<?php echo STYLEROOT;?>/cache/<?php echo $_SESSION['profile_picture'];?>" alt="profile picture" class="profile--picture" />
                 <p class="account--username"><?php echo $_SESSION['username'];?></p>
+                <form class="profile--picture" action="<?php echo URLROOT?>/users/myaccount" method="POST" enctype="multipart/form-data">
+                    <label class="update--picture" id="update-profilePicture">
+                        Choose New Picture
+                        <input style="display:none" type="file" name="user_image" size='60' />
+                    </label>
+                    <button id='button_profile' name="update" class="update--picture"> Update Picture </button>
+                </form>
             </div>
+
+
             <form action="<?php echo URLROOT?>/users/myaccount" method = "POST">
                 <p class="account--mail"><?php echo $_SESSION['email'];?></p>
                 <h6 class="succes-messages"> 
@@ -61,7 +72,7 @@
                     <h6 class="error-messages"> 
                         <?php echo $data['confirmPasswordError'];?>
                     </h6>
-                <button type="submit">Save changes</button>
+                <button name="changePass" type="submit">Save changes</button>
             </form>
         </div>
 

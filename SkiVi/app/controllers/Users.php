@@ -153,7 +153,30 @@ class Users extends Controller{
                 'progress-origami'=>'',
                 'progress-signLanguage'=>'',
             ];
-            $data=$this->changePassword();
+            
+            if(isset($_POST['update'])){
+                
+                $user_image = "profile";
+				$image_tmp = $_FILES['user_image']['tmp_name'];
+				$random_number = rand(1,1000);
+                
+				if(!$user_image==''){
+                    $destination_path = getcwd().DIRECTORY_SEPARATOR;
+                    $target_path = $destination_path . "cache\\" . $user_image . $random_number . '.jpg';
+
+					move_uploaded_file($image_tmp, $target_path);
+                    $upload_image_name=$user_image . $random_number;
+                    
+
+                    if($this->userModel->changeProfilePicture($upload_image_name,$_SESSION['user_id'])){
+                        $_SESSION['profile_picture']=$upload_image_name . '.jpg';
+                    }
+				}
+                
+			}elseif(isset($_POST['changePass'])){
+                $data=$this->changePassword();
+            }
+
             $data=$this->setProgress($data);
             $this->view('users/myaccount',$data);
         }
@@ -248,6 +271,7 @@ class Users extends Controller{
         $_SESSION['username'] = $user->user_name;
         $_SESSION['email'] = $user->user_email;
         $_SESSION['admin'] = $user->admin;
+        $_SESSION['profile_picture'] = $user->profile_picture . '.jpg';
     
         header('location: ' . URLROOT . '/pages/index');
         
@@ -258,6 +282,7 @@ class Users extends Controller{
         unset($_SESSION['username']);
         unset($_SESSION['email']);
         unset($_SESSION['admin']);
+        unset($_SESSION['profile_picture']);
         header('location:' . URLROOT . '/users/login');
     }
 }

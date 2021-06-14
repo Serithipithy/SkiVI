@@ -111,4 +111,20 @@
             $response = json_decode($response, true);
             return intVal($response);
         }
+
+        public function changeProfilePicture($file_name,$user_id){
+            //prepare statement
+            $this->db->query('UPDATE users SET profile_picture = :file_name WHERE user_id = :user_id');
+
+            // bind file name and user id
+            $this->db->bind(':file_name',$file_name);
+            $this->db->bind(':user_id',$user_id);
+
+            //EXECUTE THE FUNCTION
+            if($this->db->execute()){
+                return true;
+            } else {
+                return false;
+            }
+        }
     }

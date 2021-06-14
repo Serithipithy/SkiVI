@@ -51,6 +51,9 @@ h6{
 }
 
 .profile--picture {
+    /* width: 11.5em; */
+    /* height: 10em; */
+    object-fit: cover;
     width: 10em;
     height: 10em;
     border-radius: 50%;
@@ -100,6 +103,22 @@ button {
     background-color: #f78888;
     border-radius: 3px;
     font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+form.profile--picture{
+    width: 9em;
+    
+}
+.update--picture{
+    margin-left: -1.5em;
+    margin-top: 1.3em;
+    padding: 0.4em 2em 0.4em 2em;
+    border: 4px #f78888;
+    background-color: #f78888;
+    border-radius: 3px;
+    font-weight: bolder;
+    font-size: 0.8em;
     color: white;
     cursor: pointer;
 }
@@ -252,7 +271,7 @@ progress::-moz-progress-bar {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 35em;
+        height: 40em;
     }
     .account--profile {
         padding-left: 2%;
@@ -304,5 +323,8 @@ progress::-moz-progress-bar {
     }
     button {
         width: 11em;
+    }
+    button.update--picture{
+        width: auto;
     }
 }
