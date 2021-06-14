@@ -25,7 +25,6 @@ class FirstAid{
     
         // sanitize
         $this->title=htmlspecialchars(strip_tags($this->title));
-        $this->link=htmlspecialchars(strip_tags($this->link));
         $this->text=htmlspecialchars(strip_tags($this->text));
 
         

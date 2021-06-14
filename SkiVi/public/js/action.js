@@ -4,17 +4,17 @@ $(document).ready(function() {
 
         var skillname = $("#skill_name").val();
         var title = $("#title").val();
-        var link = $("#link").val();
+        var string = $("#link").val();
         var text = $("#text").val();
-        var string = link;
-        var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-        console.log(res);
-        if (res !== null) {
-            var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
-        } else {
-            link = "";
-            var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
-        }
+        var link = string.replace(/"/g, "'");
+        console.log(link);
+        var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
+        // if (link !== null) {
+        //     var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
+        // } else {
+        //     link = "";
+        //     var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
+        // }
         var obj = JSON.parse(JSON.stringify(sendMessage));
 
         if (skillname.localeCompare("skill1") == 0) {
