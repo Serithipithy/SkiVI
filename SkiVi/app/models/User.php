@@ -21,7 +21,7 @@
             $this->db->bind(':email',$data['email']);
             $this->db->bind(':password',$data['password']);
 
-            //EXECYTE THE FUNCTION
+            //EXECUTE THE FUNCTION
             if($this->db->execute()){
                 return true;
             } else {
@@ -60,5 +60,41 @@
             } else {
                 return false;
             }
+        }
+
+        public function isValidPassword($username,$password){
+            //Prepared statement
+            $this->db->query('SELECT * FROM users WHERE user_name = :username');
+
+            //username and password bind-ing
+            $this->db->bind(':username',$username);
+            
+            //get the row
+            $row = $this->db->single();
+            
+            //get password from database
+            $hashedPassword = $row->user_password;
+            // Check if password is a match
+            if(password_verify($password, $hashedPassword)){
+                return true;
+            }
+            return false;
+        }
+
+        public function changePassword($username,$newPassword){
+            //Prepared statement
+            $this->db->query('UPDATE users SET user_password = :newPassword WHERE user_name = :username');
+
+            //username and password bind-ing
+            $this->db->bind(':username',$username);
+            $this->db->bind(':newPassword',$newPassword);
+
+            //EXECUTE THE FUNCTION
+            if($this->db->execute()){
+                return true;
+            } else {
+                return false;
+            }
+
         }
     }

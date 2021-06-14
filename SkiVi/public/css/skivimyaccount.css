@@ -13,6 +13,7 @@
 }
 
 h1 {
+    text-align: left;
     padding-top: 0.7em;
     font-size: 2.5em;
 }
@@ -23,6 +24,17 @@ h4 {
     padding-bottom: 2em;
     font-size: 0.9em;
     margin: 0;
+}
+h6{
+    margin: 0.5em;
+}
+.succes-messages{
+    color: green;
+    font-size: 1em;
+}
+.error-messages{
+    color: red;
+    font-size: 0.8em;
 }
 
 .account--container {
@@ -35,7 +47,7 @@ h4 {
     list-style: none;
     border-bottom: 2px solid #f78888;
     /* box-shadow: 0px 2px 17px -10px #f78888; */
-    height: 18em;
+    height: 20em;
 }
 
 .profile--picture {
@@ -238,7 +250,7 @@ progress::-moz-progress-bar {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 30em;
+        height: 35em;
     }
     .account--profile {
         padding-left: 2%;

@@ -133,6 +133,81 @@ class Users extends Controller{
 
         $this->view('users/login',$data);
     }
+    public function myaccount(){
+        if(!$_SESSION['user_id']){
+            //$data='You have to login first in order to acces this page';
+            header('location:' . URLROOT . '/pages/restrictPage');
+        }
+        else{
+            $data=$this->changePassword();            
+            $this->view('users/myaccount',$data);
+        }
+    }
+    public function changePassword(){
+        $data = [
+            'username' =>'',
+            'currentPassword' => '',
+            'newPassword'=>'',
+            'confirmPassword'=>'',
+            'currentPasswordError'=>'',
+            'newPasswordError' => '',
+            'confirmPasswordError' => '',
+            'succesMessage'=>''
+        ];
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
+            $data = [
+                'username' =>$_SESSION['username'],
+                'currentPassword' => trim($_POST['currentPassword']),
+                'newPassword'=>trim($_POST['newPassword']),
+                'confirmPassword'=>trim($_POST['confirmPassword']),
+                'currentPasswordError'=>'',
+                'newPasswordError' => '',
+                'confirmPasswordError' => '',
+                'succesMessage'=>''
+            ];
+
+            $passwordValidation = "/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
+
+            //validate currentPassword
+            if(empty($data['currentPassword'])){
+                $data['currentPasswordError'] = 'Please enter your current password.';
+            } else
+                { 
+                    if(!$this->userModel->isValidPassword($data['username'],$data['currentPassword'])) {
+                        $data['currentPasswordError'] = 'Incorrect password.';
+                    }
+                }
+
+
+            //validate newPassword == confirmPassword and the new password
+            if(empty($data['newPassword'])){
+                $data['newPasswordError'] = 'Please enter your new password.';
+            } elseif (empty($data['confirmPassword'])){
+                $data['confirmPasswordError'] = 'Please enter the confirmation password.';
+            } elseif(!($data['newPassword'] === $data['confirmPassword'])) {
+                $data['confirmPasswordError'] = 'Passwords don\'t match';
+            } elseif (strlen($data['newPassword']) < 6){
+                $data['newPasswordError'] = 'Password must be at least 6 characters.';
+            } elseif (preg_match($passwordValidation,$data['newPassword'])){
+                $data['newPasswordError'] = 'Password must have at least one numeric value.';
+            }
+
+            //Check if all error are empty
+            if ((empty($data['currentPasswordError']) && empty($data['newPasswordError'])) && empty($data['confirmPasswordError'])){
+                $data['newPassword'] = password_hash($data['newPassword'],PASSWORD_DEFAULT);
+                if(!$this->userModel->changePassword($data['username'],$data['newPassword'])){
+                    $data['succesMessage'] = 'Could not change password, try again!';
+                } else {
+                    $data['succesMessage'] = 'Password changed';
+                }
+            }
+            
+        }
+        return $data;
+
+    }
 
     public function createUserSession($user){
         session_start();

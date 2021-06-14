@@ -22,7 +22,7 @@
             <div class="openMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
                 <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
-                <li><a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a></li>
+                <li><a href="<?php echo URLROOT;?>/users/myaccount">My Account</a></li>
                 <li>
                     <?php if(!isset($_SESSION['user_id'])) : ?>
                     <a href="<?php echo URLROOT;?>/users/signup">Sign Up</a>

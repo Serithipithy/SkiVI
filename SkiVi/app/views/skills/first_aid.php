@@ -23,7 +23,7 @@
             <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
                 <li>
                     <?php if(isset($_SESSION['user_id'])) : ?>
-                    <a href="<?php echo URLROOT;?>/pages/myaccount">My Account</a>
+                    <a href="<?php echo URLROOT;?>/users/myaccount">My Account</a>
                     <?php endif; ?>
                 </li>
                 <li>

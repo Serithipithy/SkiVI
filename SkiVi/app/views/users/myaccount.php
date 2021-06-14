@@ -44,11 +44,23 @@
                 <img src="<?php echo STYLEROOT;?>/assets/img/profile-picture.jpg" alt="profile picture" class="profile--picture" />
                 <p class="account--username"><?php echo $_SESSION['username'];?></p>
             </div>
-            <form>
+            <form action="<?php echo URLROOT?>/users/myaccount" method = "POST">
                 <p class="account--mail"><?php echo $_SESSION['email'];?></p>
-                <input type="text" placeholder="New username...">
-                <input type="password" placeholder="Change password...">
-                <input type="password" placeholder="Confirm password...">
+                <h6 class="succes-messages"> 
+                    <?php echo $data['succesMessage'];?>
+                </h6>
+                <input type="password" placeholder="Current password..." name="currentPassword">
+                    <h6 class="error-messages"> 
+                        <?php echo $data['currentPasswordError'];?>
+                    </h6>
+                <input type="password" placeholder="New password..." name="newPassword">
+                    <h6 class="error-messages"> 
+                        <?php echo $data['newPasswordError'];?>
+                    </h6>
+                <input type="password" placeholder="Confirm password..." name="confirmPassword">
+                    <h6 class="error-messages"> 
+                        <?php echo $data['confirmPasswordError'];?>
+                    </h6>
                 <button type="submit">Save changes</button>
             </form>
         </div>
