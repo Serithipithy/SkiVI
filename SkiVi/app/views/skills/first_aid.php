@@ -92,18 +92,20 @@
                for($i=0;$i<$size ;$i++){ 
                echo' <div class="dropdowns">
                     <div class="dropbtn--course">
-                   <h2>';
+                   <h2 >';
+                   //title
               echo $data[$i][0]; 
                    echo'</h2></div>
                    <div id="course--dropdown">
                    <div class="drop--bg">';
-                  
+                  //video
                    if($data[$i][1]!=null){
                        echo'<iframe allow="fullscreen" src="';
                        echo $data[$i][1];
                        echo'">
                        </iframe>';
                    }
+                   //text
                    if($data[$i][2]!=null){ 
                         echo'<p class="course--txt">';
                         echo $data[$i][2] ;
@@ -112,7 +114,11 @@
                   echo' <p class="course--txt"> <img src="';
                   echo STYLEROOT;
                   echo'/assets/img/exclamation.png" alt="exclamation" class="info"> After you finish the course please click the "Done" button from the right.</p>
-                   <button class="btn--done" type="submit"> Done </button>
+                   <button id="done" name="';
+                   echo $_SESSION['user_id'];
+                   echo '~';
+                   echo $data[$i][0]; 
+                   echo'" class="btn--done" type="button" onclick="myFunction(this);"> Done </button>
                </div>
            </div>
         </div>';
@@ -139,9 +145,9 @@
         <h5>Web Technologies project | 2021</h5>
     </section>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="<?php echo STYLEROOT;?>/js/navbar.js"></script>
-    <script src="<?php echo STYLEROOT;?>/js/script-skill.js"></script>
+    <script src="<?php echo STYLEROOT;?>/js/first_aid_done_btn.js"></script>
 
 
 </body>

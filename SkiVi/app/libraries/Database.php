@@ -10,7 +10,7 @@
         private $password='';
 
         public function __construct(){
-            //$conn ='sqlite:C:\Users\cosmi\OneDrive\Desktop\facultate\sem2\tweb\SkiVi\app\SkiViDB';
+            
             try{
                 $this->dbHandler = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name, $this->username, $this->password);
             } catch (PDOException $e){

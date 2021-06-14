@@ -113,10 +113,14 @@
                   echo' <p class="course--txt"> <img src="';
                   echo STYLEROOT;
                   echo'/assets/img/exclamation.png" alt="exclamation" class="info"> After you finish the course please click the "Done" button from the right.</p>
-                   <button class="btn--done" type="submit"> Done </button>
-               </div>
-           </div>
-        </div>';
+                  <button id="done" name="';
+                  echo $_SESSION['user_id'];
+                  echo '~';
+                  echo $data[$i][0]; 
+                  echo'" class="btn--done" type="button" onclick="myFunction(this);"> Done </button>
+              </div>
+          </div>
+       </div>';
 
          }
             ?>
@@ -142,8 +146,8 @@
 
 
     <script src="<?php echo STYLEROOT;?>/js/navbar.js"></script>
-    <script src="<?php echo STYLEROOT;?>/js/script-skill.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="<?php echo STYLEROOT;?>/js/sign_lng_done_btn.js"></script>
 
 </body>
 

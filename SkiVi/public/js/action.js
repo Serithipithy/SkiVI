@@ -16,7 +16,7 @@ $(document).ready(function() {
             var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
         }
         var obj = JSON.parse(JSON.stringify(sendMessage));
-        console.log(obj);
+
         if (skillname.localeCompare("skill1") == 0) {
             $.ajax({
                 type: 'POST',
