@@ -55,7 +55,15 @@
                 <!-- <input type="text" placeholder="Skill name" name='skill_name'> -->
                 <label>Course title</label>
                 <input type="text" placeholder="Course title" id="title">
-                <label>Video link(if there is any)</label>
+                <label> Embeded video link 
+                    <div class="embed--exp">
+                    <img class="question" src="<?php echo STYLEROOT;?>/assets/img/question.png" alt="question mark">
+                      <p class="embed--explanation"> To add an embeded link go to youtube , you will find there the "Share" button
+                           click there and choose "Embed". 
+                          Copy the whole tag(the html tags also) and paste it here.
+                     </p>
+                    </div>
+                </label>
                 <input type="text" placeholder="Video link" id="link">
                 <label>Course Content(text)</label>
                 <textarea class="content" id="text" placeholder="Course Content"></textarea>

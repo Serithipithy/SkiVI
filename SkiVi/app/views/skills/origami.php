@@ -100,10 +100,7 @@
                    <div class="drop--bg">';
                   
                    if($data[$i][1]!=null){
-                       echo'<iframe allow="fullscreen" src="';
                        echo $data[$i][1];
-                       echo'">
-                       </iframe>';
                    }
                    if($data[$i][2]!=null){ 
                         echo'<p class="course--txt">';

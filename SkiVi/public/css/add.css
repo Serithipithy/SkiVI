@@ -82,9 +82,11 @@
         color: grey;
         font-weight: lighter;
     }
-    select{
+    
+    select {
         margin-top: 0.5em;
     }
+    
     form {
         display: flex;
         flex-direction: column;
@@ -131,6 +133,23 @@
         margin-top: 2em;
     }
     
+    .question {
+        width: 1.2em;
+        height: 1.2em;
+    }
+    
+    .embed--explanation {
+        display: none;
+        padding: 1em 1em 1em 1em;
+        background-color: white;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        font-size: 0.9em;
+    }
+    
+    .embed--exp:hover .embed--explanation {
+        display: block;
+    }
+    
     button:hover {
         color: white;
         background-color: black;
@@ -138,7 +157,7 @@
     }
     
     @media only screen and (max-width:500px) {
-        .delete--formular--box{
+        .delete--formular--box {
             width: 260px;
         }
         .formular--box {
@@ -146,7 +165,7 @@
             height: 700px;
             margin-top: 3%;
         }
-        label{
+        label {
             padding-left: 10px;
         }
         .title {

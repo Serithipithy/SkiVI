@@ -100,10 +100,10 @@
                    <div class="drop--bg">';
                   //video
                    if($data[$i][1]!=null){
-                       echo'<iframe allow="fullscreen" src="';
+                    //echo'<video controls> <source src="';
                        echo $data[$i][1];
-                       echo'">
-                       </iframe>';
+                    //    echo'"type="video/mp4">
+                    //    </video>';
                    }
                    //text
                    if($data[$i][2]!=null){ 
