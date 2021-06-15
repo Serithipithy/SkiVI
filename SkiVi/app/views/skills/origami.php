@@ -28,7 +28,7 @@
                 </li>
                 <li>
                 <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'yes') : ?>
-                    <a href="<?php echo URLROOT;?>/skills/modify">Modify</a>
+                    <a href="<?php echo URLROOT;?>/skills/manage">Manage</a>
                 <?php endif; ?>
                 </li>
                 <li>
@@ -66,24 +66,6 @@
                     </p>
                 </div>
             </div>
-            <div class="course--content--needs">
-                <div class="course--content">
-                    <h2>This Course Contains</h2>
-                    <ul>
-                        <li> 10 ore de viziorane</li>
-                        <li>40 de videoclipuri </li>
-                        <li>10 lectii pentru acasa:))</li>
-                    </ul>
-                </div>
-                <div class="course--content">
-                    <h2>For this course you will need</h2>
-                    <ul>
-                        <li>ceva</li>
-                        <li>altceva</li>
-                        <li>nu stiu </li>
-                    </ul>
-                </div>
-            </div>
         </div>
         <!-- <button class="button--middle">Get Courses</button> -->
         <div class="courses">
@@ -107,17 +89,20 @@
                         echo $data[$i][2] ;
                         echo'</p>';
                    }
-                  echo' <p class="course--txt"> <img src="';
-                  echo STYLEROOT;
-                  echo'/assets/img/exclamation.png" alt="exclamation" class="info"> After you finish the course please click the "Done" button from the right.</p>
-                  <button id="done" name="';
-                  echo $_SESSION['user_id'];
-                  echo '~';
-                  echo $data[$i][0]; 
-                  echo'" class="btn--done" type="button" onclick="myFunction(this);"> Done </button>
-              </div>
-          </div>
-       </div>';
+                   if($param[$i]=='no'){
+                    echo' <p class="course--txt"> <img src="';
+                    echo STYLEROOT;
+                    echo'/assets/img/exclamation.png" alt="exclamation" class="info"> After you finish the course please click the "Done" button from the right.</p>
+                     <button id="done" name="';
+                     echo $_SESSION['user_id'];
+                     echo '~';
+                     echo $data[$i][0]; 
+                     echo'" class="btn--done" type="button" onclick="myFunction(this);"> Done </button>';
+           
+                   }
+                   echo'</div>
+                   </div>
+                </div>';
 
          }
             ?>

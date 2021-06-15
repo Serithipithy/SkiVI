@@ -23,7 +23,7 @@
             <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
             <li>
                 <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'yes') : ?>
-                    <a href="<?php echo URLROOT;?>/skills/modify">Modify</a>
+                    <a href="<?php echo URLROOT;?>/skills/manage">Manage</a>
                 <?php endif; ?>
             </li>
             <li><a href="<?php echo URLROOT;?>/users/logout">Log Out</a></li>

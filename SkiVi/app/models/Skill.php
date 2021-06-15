@@ -76,4 +76,27 @@ class Skill{
 
             return $content_array;
         }
+
+        public function getDoneCourses($content_array,$done_array){
+            $param=array();
+            $size1=count($content_array);
+            if(!empty($done_array['message'])){
+                $size2=0;
+            }
+            else{
+                $size2=count($done_array);
+            }
+            for($i=0;$i<$size1 ;$i++){ 
+              $param[$i]='no';
+              if($size2>0){
+                  for($j=0;$j<$size2;$j++){
+                      if( $content_array[$i][0]==$done_array[$j]){
+                          $param[$i]='yes';
+                          $j=$size2;
+                      }
+                  }
+              }
+            }
+            return $param;
+        }
 }

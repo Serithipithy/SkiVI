@@ -3,14 +3,17 @@
 class Skills extends Controller
 {
     public function __construct(){
+        $this->userModel=$this->model('User');
         $this->skillModel = $this->model('Skill');
     }
     public function first_aid(){
         if(!$_SESSION['user_id']){
             header('location:' . URLROOT . '/users/login');
         } else {
-            $content_array=$this->skillModel->getCoursesFA();        
-            $this->view('skills/first_aid', $content_array);
+            $content_array=$this->skillModel->getCoursesFA();
+            $done_array=$this->userModel->getTakenCourses($_SESSION['user_id'],'first_aid'); 
+            $param=$this->skillModel->getDoneCourses($content_array,$done_array);       
+            $this->view('skills/first_aid', $content_array,$param);
         }
 
     }
@@ -20,7 +23,9 @@ class Skills extends Controller
             header('location:' . URLROOT . '/users/login');
         } else {
             $content_array=$this->skillModel->getCoursesOrigami();
-            $this->view('skills/origami', $content_array);
+            $done_array=$this->userModel->getTakenCourses($_SESSION['user_id'],'origami'); 
+            $param=$this->skillModel->getDoneCourses($content_array,$done_array); 
+            $this->view('skills/origami', $content_array,$param);
         }
     }
 
@@ -29,7 +34,9 @@ class Skills extends Controller
             header('location:' . URLROOT . '/users/login');
         } else {
             $content_array=$this->skillModel->getCoursesSignLng();
-            $this->view('skills/sign_language', $content_array);
+            $done_array=$this->userModel->getTakenCourses($_SESSION['user_id'],'sign_lng'); 
+            $param=$this->skillModel->getDoneCourses($content_array,$done_array); 
+            $this->view('skills/sign_language', $content_array,$param);
         }
     }
 
@@ -39,11 +46,11 @@ class Skills extends Controller
         } 
         else $this->view('skills/addCourse');
     }
-    public function modify(){
+    public function manage(){
         if(!$_SESSION['admin'] == 'yes'){
             header('location:' . URLROOT . '/pages/restrictPage');
         }
-        else $this->view('skills/modify');
+        else $this->view('skills/manage');
     }
     public function updateCourse(){
         if(!$_SESSION['admin'] == 'yes'){

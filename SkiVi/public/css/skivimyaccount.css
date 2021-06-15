@@ -25,14 +25,17 @@ h4 {
     font-size: 0.9em;
     margin: 0;
 }
-h6{
+
+h6 {
     margin: 0.5em;
 }
-.succes-messages{
+
+.succes-messages {
     color: green;
     font-size: 1em;
 }
-.error-messages{
+
+.error-messages {
     color: red;
     font-size: 0.8em;
 }
@@ -106,11 +109,12 @@ button {
     color: white;
     cursor: pointer;
 }
-form.profile--picture{
+
+form.profile--picture {
     width: 9em;
-    
 }
-.update--picture{
+
+.update--picture {
     margin-left: -1.5em;
     margin-top: 1.3em;
     padding: 0.4em 2em 0.4em 2em;
@@ -286,7 +290,6 @@ progress::-moz-progress-bar {
     .account--profile {
         padding-left: 7%;
     }
-
 }
 
 @media only screen and (max-width:320px) {
@@ -324,7 +327,7 @@ progress::-moz-progress-bar {
     button {
         width: 11em;
     }
-    button.update--picture{
+    button.update--picture {
         width: auto;
     }
 }

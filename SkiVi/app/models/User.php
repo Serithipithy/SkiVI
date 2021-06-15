@@ -112,6 +112,20 @@
             return intVal($response);
         }
 
+        public function getTakenCourses($user_id,$skill){
+            $curl=curl_init();
+            curl_setopt_array($curl, array(
+            CURLOPT_URL=>'http://localhost:8000/REST_API_USER_INFO/api/getCoursesBySkill.php?id='.$user_id.'&skill=' .$skill,
+            CURLOPT_RETURNTRANSFER=>true,
+            CURLOPT_CUSTOMREQUEST=>"GET",
+            ));
+
+            $response=curl_exec($curl);
+            curl_close($curl);
+            $response = json_decode($response, true);
+            return $response;
+        }
+
         public function changeProfilePicture($file_name,$user_id){
             //prepare statement
             $this->db->query('UPDATE users SET profile_picture = :file_name WHERE user_id = :user_id');
