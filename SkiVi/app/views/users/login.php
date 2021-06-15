@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
+    content="SkiVi is a WebApp created for people to learn.">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivi2.css" type="text/css">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/header.css" type="text/css">
     <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/skivilog.css" type="text/css">
