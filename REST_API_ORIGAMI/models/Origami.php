@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @OA\Info(title="SkiVi Origami Api", version="0.1")
+ */
 class Origami{
     private $conn;
     private $table='courses'; // set din input
@@ -13,7 +15,22 @@ class Origami{
     public function __construct($db){
         $this->conn=$db;
     }
-
+    /**
+     * @OA\Post(path="/REST_API_ORIGAMI/api/post.php", tags={"Origami"},
+     * @OA\RequestBody(
+     *      @OA\MediaType(
+     *          mediaType="json",
+     *          @OA\Schema(required={"title"}, 
+     *              @OA\Property(property = "title", type="string"), 
+     *              @OA\Property(property = "link", type="string", example="<iframe width='560' height='315' src='ttps://www.youtube.com/embed/hwMM0av44fY' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"),
+     *              @OA\Property(property = "text", type="string")
+     *          )
+     *      )
+     * ),
+     * @OA\Response (response="200", description="Succes"),
+     * @OA\Response (response="404", description="Not Found")
+     * )
+     */
     //create new course method
     public function createCourse(){
 
@@ -41,6 +58,23 @@ class Origami{
         return false;
     }
 
+    /**
+     * @OA\Put(path="/REST_API_ORIGAMI/api/put.php", tags={"Origami"},
+     * @OA\RequestBody(
+     *      @OA\MediaType(
+     *          mediaType="json",
+     *          @OA\Schema(required={"title"}, 
+     *              @OA\Property(property = "title", type="string"), 
+     *              @OA\Property(property = "link", type="string", example="<iframe width='560' height='315' src='https://www.youtube.com/embed/hwMM0av44fY' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"),
+     *              @OA\Property(property = "text", type="string")
+     *          )
+     *      )
+     * ),
+     * @OA\Response (response="200", description="Succes"),
+     * @OA\Response (response="404", description="Not Found")
+     * )
+     */
+
     public function updateCourse(){
         //create query
         $query='UPDATE ' . $this->table . ' SET link=:link, text=:text WHERE title=:title'; 
@@ -66,6 +100,13 @@ class Origami{
         return false;
     }
 
+    /**
+     * @OA\Get(path="/REST_API_ORIGAMI/api/get.php", tags={"Origami"},
+     * @OA\Response (response="200", description="Succes"),
+     * @OA\Response (response="404", description="Not Found")
+     * )
+     */
+
     public function getCourses(){
         //create query
         $query='SELECT title, link, text  FROM courses ORDER BY data ASC';
@@ -78,6 +119,21 @@ class Origami{
 
         return $stmt;
     }
+
+
+    /**
+     * @OA\Get(path="/REST_API_ORIGAMI/api/get_single.php?title={title}", tags={"Origami"},
+     * @OA\Parameter(
+     *         description="Title of a course",
+     *         in="path",
+     *         name="title",
+     *         required=true,
+     *         @OA\Schema(type="string")
+     *     ),
+     * @OA\Response (response="200", description="Succes"),
+     * @OA\Response (response="404", description="Not Found")
+     * )
+     */
 
     public function getSingleCourse(){
         //create query
@@ -97,6 +153,20 @@ class Origami{
 
         return $stmt;
     }
+
+    /**
+     * @OA\Delete(path="/REST_API_ORIGAMI/api/delete.php?title={title}", tags={"Origami"},
+     *  @OA\Parameter(
+     *         description="Title of the course",
+     *         in="path",
+     *         name="title",
+     *         required=true,
+     *         @OA\Schema(type="string")
+     *     ),
+     * @OA\Response (response="200", description="Succes"),
+     * @OA\Response (response="404", description="Not Found")
+     * )
+     */
 
     public function delete(){
         // delete query

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @OA\Info(title="SkiVi User Information Api", version="0.1")
+ */
 class UserInfo{
     private $conn;
     private $table='user_info'; // set din input
@@ -14,6 +16,23 @@ class UserInfo{
         $this->conn=$db;
     }
     
+    /**
+     * @OA\Post(path="/REST_API_USER_INFO/api/post.php", tags={"User Information"},
+     * @OA\RequestBody(
+     *      @OA\MediaType(
+     *          mediaType="json",
+     *          @OA\Schema(required={"user_id","skill","course"},
+     *              @OA\Property(property = "user_id", type="integer"), 
+     *              @OA\Property(property = "skill", type="string", example="first_aid"), 
+     *              @OA\Property(property = "course", type="string", example="introduction")
+     *          )
+     *      )
+     * ),
+     * @OA\Response (response="200", description="Succes"),
+     * @OA\Response (response="404", description="Not Found")
+     * )
+     */
+
     //add skill->course
     public function addDone(){
         //create query
@@ -38,6 +57,20 @@ class UserInfo{
         return false;
     }
 
+    /**
+     * @OA\Delete(path="/REST_API_USER_INFO/api/delete.php?course={course}", tags={"User Information"},
+     *  @OA\Parameter(
+     *         description="Title of the course",
+     *         in="path",
+     *         name="course",
+     *         required=true,
+     *         @OA\Schema(type="string")
+     *     ),
+     * @OA\Response (response="200", description="Succes"),
+     * @OA\Response (response="404", description="Not Found")
+     * )
+     */
+
     public function delete(){
         // delete query
         $query = "DELETE FROM " . $this->table . " WHERE course =:course";
@@ -60,6 +93,27 @@ class UserInfo{
 
     }
 
+    /**
+     * @OA\Get(path="/REST_API_USER_INFO/api/getCoursesBySkill.php?id={id}&skill={skill}", tags={"User Information"},
+     *  @OA\Parameter(
+     *         description="Id of a user",
+     *         in="path",
+     *         name="id",
+     *         required=true,
+     *         @OA\Schema(type="integer")
+     *     ),
+     * @OA\Parameter(
+     *         description="Skill name",
+     *         in="path",
+     *         name="skill",
+     *         required=true,
+     *         @OA\Schema(type="string")
+     *     ),
+     * @OA\Response (response="200", description="Succes"),
+     * @OA\Response (response="404", description="Not Found")
+     * )
+     */
+
     public function getCoursesBySkill(){
         // select query
         $query = "SELECT * FROM " . $this->table . " WHERE user_id = :user_id and skill = :skill";
@@ -81,6 +135,27 @@ class UserInfo{
         return $stmt;
        
     }
+
+    /**
+     * @OA\Get(path="/REST_API_USER_INFO/api/getNoCourses.php?id={id}&skill={skill}", tags={"User Information"},
+     *  @OA\Parameter(
+     *         description="Id of a user",
+     *         in="path",
+     *         name="id",
+     *         required=true,
+     *         @OA\Schema(type="integer")
+     *     ),
+     * @OA\Parameter(
+     *         description="Skill name",
+     *         in="path",
+     *         name="skill",
+     *         required=true,
+     *         @OA\Schema(type="string")
+     *     ),
+     * @OA\Response (response="200", description="Succes"),
+     * @OA\Response (response="404", description="Not Found")
+     * )
+     */
 
     public function getNoCoursesBySkill(){
         // select query
