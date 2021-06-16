@@ -19,8 +19,20 @@ $(document).ready(function() {
                     console.log(e.message);
 
                     $("#skill_name").val("");
-                    $("#title").val("");
+                    $("#course_title").val("");
                     $("#statusText").html(e.message);
+                }
+            });
+            $.ajax({
+                type: 'DELETE',
+                url: 'http://localhost:8000/REST_API_USER_INFO/api/delete.php?course='+ title + '&skill=first_aid',
+                error: function(e) {
+                    console.log(e);
+                },
+                dataType: "json",
+                contentType: "application/json",
+                success: function(e) {
+                    console.log(e.message);
                 }
             });
         }
@@ -37,8 +49,20 @@ $(document).ready(function() {
                     console.log(e.message);
 
                     $("#skill_name").val("");
-                    $("#title").val("");
+                    $("#course_title").val("");
                     $("#statusText").html(e.message);
+                }
+            });
+            $.ajax({
+                type: 'DELETE',
+                url: 'http://localhost:8000/REST_API_USER_INFO/api/delete.php?course='+ title + '&skill=origami',
+                error: function(e) {
+                    console.log(e);
+                },
+                dataType: "json",
+                contentType: "application/json",
+                success: function(e) {
+                    console.log(e.message);
                 }
             });
         }
@@ -55,8 +79,20 @@ $(document).ready(function() {
                     console.log(e.message);
 
                     $("#skill_name").val("");
-                    $("#title").val("");
+                    $("#course_title").val("");
                     $("#statusText").html(e.message);
+                }
+            });
+            $.ajax({
+                type: 'DELETE',
+                url: 'http://localhost:8000/REST_API_USER_INFO/api/delete.php?course='+ title + '&skill=sign_lng',
+                error: function(e) {
+                    console.log(e);
+                },
+                dataType: "json",
+                contentType: "application/json",
+                success: function(e) {
+                    console.log(e.message);
                 }
             });
         }

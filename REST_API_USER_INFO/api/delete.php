@@ -25,6 +25,7 @@ $data=json_decode(file_get_contents("php://input"));
 
 //get course to delete
 $user_info->course=isset($_GET['course'])?$_GET['course']:die();
+$user_info->skill=isset($_GET['skill'])?$_GET['skill']:die();
 
 // delete the product
 if($user_info->delete()){

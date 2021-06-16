@@ -58,11 +58,18 @@ class UserInfo{
     }
 
     /**
-     * @OA\Delete(path="/REST_API_USER_INFO/api/delete.php?course={course}", tags={"User Information"},
+     * @OA\Delete(path="/REST_API_USER_INFO/api/delete.php?course={course}&skill={skill}", tags={"User Information"},
      *  @OA\Parameter(
      *         description="Title of the course",
      *         in="path",
      *         name="course",
+     *         required=true,
+     *         @OA\Schema(type="string")
+     *     ),
+     *  @OA\Parameter(
+     *         description="Title of the skill",
+     *         in="path",
+     *         name="skill",
      *         required=true,
      *         @OA\Schema(type="string")
      *     ),
@@ -73,16 +80,18 @@ class UserInfo{
 
     public function delete(){
         // delete query
-        $query = "DELETE FROM " . $this->table . " WHERE course =:course";
+        $query = "DELETE FROM " . $this->table . " WHERE course =:course and skill = :skill";
 
         // prepare query
         $stmt = $this->conn->prepare($query);
 
         // sanitize
         $this->course=htmlspecialchars(strip_tags($this->course));
+        $this->skill=htmlspecialchars(strip_tags($this->skill));
 
         // bind id of record to delete
         $stmt->bindParam(":course", $this->course);
+        $stmt->bindParam(":skill", $this->skill);
 
         // execute query
         if($stmt->execute()){
