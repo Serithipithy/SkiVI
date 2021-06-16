@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
@@ -19,13 +18,13 @@ body {
     margin: 0;
 }
 
-h1{
+h1 {
     font-size: 3em;
     display: flex;
     justify-content: center;
 }
 
-h2{
+h2 {
     border: 2px solid white;
     border-bottom-color: #f78888;
     padding-bottom: 0.3em;
@@ -33,39 +32,47 @@ h2{
     margin-left: 2em;
 }
 
-h3{
+h3 {
     font-size: 1.5em;
     margin-left: 4em;
 }
 
-h4{
+h4 {
     /* font-size: 1.5em; */
     margin-left: 6em;
 }
-ul{
+
+ul {
     margin-left: 5em;
 }
-p{
+
+p {
     font-size: 1em;
     margin-left: 6em;
 }
 
-section{
+section {
     width: 90%;
 }
 
-ul ul{
+ul ul {
     margin-left: 0;
 }
 
-ol{
+ol {
     margin-left: 6em;
 }
 
-a{
+a {
     color: #d86464;
     text-decoration: none;
 }
+
 a:visited {
-    color:#ac3c3c;
+    color: #ac3c3c;
+}
+
+.diagram {
+    height: 40em;
+    width: 65em;
 }

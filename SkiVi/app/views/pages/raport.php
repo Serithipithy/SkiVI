@@ -272,7 +272,7 @@
         </section>
         <section>
             <h2 id="6">6 UML DIAGRAM</h2>
-            <p>todo</p>
+            <p><img class="diagram" src="<?php echo STYLEROOT;?>/assets/img/umlDiagram.jpg" alt="umlDiagram"> </p>
         </section>
         <section>
         <h2 id="7">7 WEB.DEV Scores</h2>
@@ -357,9 +357,9 @@
             </p>
         </section>
     </article>
-    <div>
-        get to index page
-    </div>
+   <p>
+   <a href="<?php echo STYLEROOT;?>/pages/index">GO TO OUR MAIN PAGE</a>
+   </p>
 </body>
 
 </html>
