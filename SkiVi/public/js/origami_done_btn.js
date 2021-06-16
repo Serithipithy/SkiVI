@@ -5,11 +5,8 @@ function myFunction(elem) {
     var content = course_title.split("~");
     var user_id = content[0];
     course_title = content[1];
-
-    console.log("click pe un buton", user_id, course_title);
-
-
-
+    elem.style.display="none";
+    
     var sendMessage = '{ "user_id":' + user_id + ', "skill": "' + skill_name + '", "course":"' + course_title + '" }';
 
     var obj = JSON.parse(JSON.stringify(sendMessage));
