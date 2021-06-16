@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SkiVi-> Skill Virtual Instructor documentation page." />
+    <link rel="stylesheet" href="<?php echo STYLEROOT;?>/css/raport.css" type="text/css">
     <title>Schorlarly Raport</title>
 </head>
 
@@ -54,8 +55,23 @@
                 </ul>
             </div>
         </section>
+        <section>
+            <h2>Content</h2>
+            <ol>
+                <li><a href="#1">Introduction</a></li>
+                <li><a href="#2">Overall Description</a></li>
+                <li><a href="#3">External Interface Requirements</a></li>
+                <li><a href="#4">System Features</a></li>
+                <li><a href="#5">Other Nonfunctional Requirements</a></li>
+                <li><a href="#6">UML DIAGRAM</a></li>
+                <li><a href="#7">WEB.DEV SCORES</a></li>
+                <li><a href="#8">Technologies</a></li>
+                <li><a href="#9">Features</a></li>
+                <li><a href="#10">Working with GIT</a></li>
+            </ol>
+        </section>
         <section typeof="sa:ReferenceList">
-            <h2>1. Introduction</h2>
+            <h2 id="1">1. Introduction</h2>
             <h3>1.1 Purpose</h3>
             <p>
                 The main purpose of the project is to develop an application for learning different, unique and helpful skills and to make it more easier for the users to keep track of their leaning jurney.
@@ -122,7 +138,7 @@
                   </div>
         </section>
         <section>
-            <h2>2 Overall Description</h2>
+            <h2 id="2">2 Overall Description</h2>
             <h3>2.1 Product Perspective</h3>
 
             <p>SkiVi is a modular web application which acts like a virtual instructor and provides different
@@ -171,7 +187,7 @@
             your favourite web browser.</p>
         </section>
         <section>
-            <h2>3 External Interface Requirements</h2>
+            <h2 id="3">3 External Interface Requirements</h2>
             <h3>3.1 User Interfaces</h3>
             <p>
             The interface for this application provides support for big screens and mobile screens based on
@@ -196,7 +212,7 @@
             </p>
         </section>
         <section>
-            <h2>4 System Features</h2>
+            <h2 id="4">4 System Features</h2>
             <h3>4.1 User Customization</h3>
             <p>
                 The user can customize it's profile by changing it's profile picture,
@@ -219,7 +235,7 @@
             </p>
         </section>
         <section>
-        <h2>5 Other Nonfunctional Requirements</h2>
+        <h2 id="5">5 Other Nonfunctional Requirements</h2>
         <h3>5.1 Performance Requirements</h3>
         <p>
             The website should load fast and be responsive on both desktop and
@@ -255,15 +271,15 @@
         </p>
         </section>
         <section>
-            <h2>6 UML DIAGRAM</h2>
+            <h2 id="6">6 UML DIAGRAM</h2>
             <p>todo</p>
         </section>
         <section>
-        <h2>7 WEB.DEV Scores</h2>
+        <h2 id="7">7 WEB.DEV Scores</h2>
         <p>todo</p>
       </section>
         <section>
-            <h2>8 Technologies</h2>
+            <h2 id="8">8 Technologies</h2>
             <h3>8.1 Microservices</h3>
             <p>
                 The skills are developed using microservices,for each skill we have a different database
@@ -295,7 +311,7 @@
             <p>We also documented our code using <a href="https://swagger.io/" target="_blank">Swagger</a> to have a good way to interact and understand how to integrate the API's with other services.</p>
         </section>
         <section>
-            <h2>9 Features</h2>
+            <h2 id="9">9 Features</h2>
             <h3>9.1 Register</h3>
             <p>
                 When an user want to create an account in our website, he will need to complete the following fields:
@@ -326,7 +342,7 @@
             
         </section>
         <section>
-            <h2>10 Working with GIT</h2>
+            <h2 id="10">10 Working with GIT</h2>
             <p>
             We used <a href="https://github.com" target="_blank">GitHub</a> and
             <a href="https://discord.com" target="_blank">Discord</a> to organize

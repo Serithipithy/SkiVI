@@ -1,0 +1,71 @@
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/montserrat-v15-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('fonts/montserrat-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/montserrat-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('fonts/montserrat-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('fonts/montserrat-v15-latin-regular.svg#Montserrat') format('svg');
+    /* Legacy iOS */
+}
+
+body {
+    font-family: "Montserrat", Sans-Serif;
+    background-color: white;
+    margin: 0;
+}
+
+h1{
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    border: 2px solid white;
+    border-bottom-color: #f78888;
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    margin-left: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+    margin-left: 4em;
+}
+
+h4{
+    /* font-size: 1.5em; */
+    margin-left: 6em;
+}
+ul{
+    margin-left: 5em;
+}
+p{
+    font-size: 1em;
+    margin-left: 6em;
+}
+
+section{
+    width: 90%;
+}
+
+ul ul{
+    margin-left: 0;
+}
+
+ol{
+    margin-left: 6em;
+}
+
+a{
+    color: #d86464;
+    text-decoration: none;
+}
+a:visited {
+    color:#ac3c3c;
+}
