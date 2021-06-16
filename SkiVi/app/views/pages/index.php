@@ -1,3 +1,7 @@
+<?php
+header("Cache-Control: max-age=2592000");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,7 +122,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         </div>
     </footer>
     <section class="project">
-        <h5>Web Technologies project | 2021</h5>
+        <p class="project--text">Web Technologies project | 2021</p>
     </section>
 
 

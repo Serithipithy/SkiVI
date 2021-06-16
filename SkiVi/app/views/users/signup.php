@@ -50,7 +50,7 @@
                     </span>
                 <button type="submit">Submit</button>
             </form>
-            <p class="extra--info">You already have an account? Please click <a href="<?php echo URLROOT;?>/users/login">here</a> to Log In.</p>
+            <p class="extra--info">You already have an account? Then you can <a href="<?php echo URLROOT;?>/users/login">Log In</a>.</p>
         </div>
     </main>
 

@@ -29,6 +29,7 @@ main {
 }
 
 .course--img {
+    object-fit: cover;
     padding: 2em;
     width: 15em;
     height: 10em;

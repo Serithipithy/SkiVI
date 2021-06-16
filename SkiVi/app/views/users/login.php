@@ -46,7 +46,7 @@
                 <button id="submit" type="submit" value="submit">Submit</button>
                 
             </form>
-            <p class="extra--info">Don't have an acount? Please click <a href="<?php echo URLROOT;?>/users/signup">here</a> to Sign up.</p>
+            <p class="extra--info">Don't have an acount? Then you can <a href="<?php echo URLROOT;?>/users/signup"> Sign up</a>.</p>
         </div>
     </main>
 
