@@ -111,6 +111,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             </div>
         </div>
         <div class="footer--contact footer--sourcecode">
+            Documentation: <a class="footer-code" href="<?php echo URLROOT;?>/pages/raport">Raport</a>
+        </div>
+        <div class="footer--contact footer--sourcecode">
             Source-Code: <a class="footer-code" href="https://github.com/Serithipithy/SkiVI-Skill-Virtual-Instructor-">GitHub</a>
         </div>
     </footer>

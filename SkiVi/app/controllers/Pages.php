@@ -22,4 +22,8 @@ class Pages extends Controller
         $this->view('pages/restrictPage',$data);
     }   
 
+    public function raport(){
+        $this->view('pages/raport');
+    }
+
 }
