@@ -16,7 +16,7 @@ class Origami{
         $this->conn=$db;
     }
     /**
-     * @OA\Post(path="/REST_API_ORIGAMI/api/post.php", tags={"Origami"},
+     * @OA\Post(path="/REST_API_ORIGAMI/api/post.php",summary="Adds a course to the database", tags={"Origami"},
      * @OA\RequestBody(
      *      @OA\MediaType(
      *          mediaType="json",
@@ -59,7 +59,7 @@ class Origami{
     }
 
     /**
-     * @OA\Put(path="/REST_API_ORIGAMI/api/put.php", tags={"Origami"},
+     * @OA\Put(path="/REST_API_ORIGAMI/api/put.php",summary="Updates the link or the text of a course", tags={"Origami"},
      * @OA\RequestBody(
      *      @OA\MediaType(
      *          mediaType="json",
@@ -101,7 +101,7 @@ class Origami{
     }
 
     /**
-     * @OA\Get(path="/REST_API_ORIGAMI/api/get.php", tags={"Origami"},
+     * @OA\Get(path="/REST_API_ORIGAMI/api/get.php",summary="Returns all the courses", tags={"Origami"},
      * @OA\Response (response="200", description="Succes"),
      * @OA\Response (response="404", description="Not Found")
      * )
@@ -122,7 +122,7 @@ class Origami{
 
 
     /**
-     * @OA\Get(path="/REST_API_ORIGAMI/api/get_single.php?title={title}", tags={"Origami"},
+     * @OA\Get(path="/REST_API_ORIGAMI/api/get_single.php?title={title}",summary="Returns the course with the given title", tags={"Origami"},
      * @OA\Parameter(
      *         description="Title of a course",
      *         in="path",
@@ -155,7 +155,7 @@ class Origami{
     }
 
     /**
-     * @OA\Delete(path="/REST_API_ORIGAMI/api/delete.php?title={title}", tags={"Origami"},
+     * @OA\Delete(path="/REST_API_ORIGAMI/api/delete.php?title={title}",summary="Deletes a course", tags={"Origami"},
      *  @OA\Parameter(
      *         description="Title of the course",
      *         in="path",

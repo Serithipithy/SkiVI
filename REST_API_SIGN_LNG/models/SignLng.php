@@ -16,7 +16,7 @@ class SignLng{
         $this->conn=$db;
     }
     /**
-     * @OA\Post(path="/REST_API_SIGN_LNG/api/post.php", tags={"Sign Language"},
+     * @OA\Post(path="/REST_API_SIGN_LNG/api/post.php", summary="Adds a course to the database",tags={"Sign Language"},
      * @OA\RequestBody(
      *      @OA\MediaType(
      *          mediaType="json",
@@ -59,7 +59,7 @@ class SignLng{
     }
 
     /**
-     * @OA\Put(path="/REST_API_SIGN_LNG/api/put.php", tags={"Sign Language"},
+     * @OA\Put(path="/REST_API_SIGN_LNG/api/put.php",summary="Updates the link or the text of a course", tags={"Sign Language"},
      * @OA\RequestBody(
      *      @OA\MediaType(
      *          mediaType="json",
@@ -101,7 +101,7 @@ class SignLng{
     }
 
     /**
-     * @OA\Get(path="/REST_API_SIGN_LNG/api/get.php", tags={"Sign Language"},
+     * @OA\Get(path="/REST_API_SIGN_LNG/api/get.php",summary="Returns all the courses", tags={"Sign Language"},
      * @OA\Response (response="200", description="Succes"),
      * @OA\Response (response="404", description="Not Found")
      * )
@@ -121,7 +121,7 @@ class SignLng{
     }
 
     /**
-     * @OA\Get(path="/REST_API_SIGN_LNG/api/get_single.php?title={title}", tags={"Sign Language"},
+     * @OA\Get(path="/REST_API_SIGN_LNG/api/get_single.php?title={title}",summary="Returns the course with the given title", tags={"Sign Language"},
      * @OA\Parameter(
      *         description="Title of a course",
      *         in="path",
@@ -156,7 +156,7 @@ class SignLng{
 
     
     /**
-     * @OA\Delete(path="/REST_API_SIGN_LNG/api/delete.php?title={title}", tags={"Sign Language"},
+     * @OA\Delete(path="/REST_API_SIGN_LNG/api/delete.php?title={title}",summary="Deletes a course", tags={"Sign Language"},
      *  @OA\Parameter(
      *         description="Title of the course",
      *         in="path",

@@ -17,7 +17,7 @@ class UserInfo{
     }
     
     /**
-     * @OA\Post(path="/REST_API_USER_INFO/api/post.php", tags={"User Information"},
+     * @OA\Post(path="/REST_API_USER_INFO/api/post.php", summary="Adds in the table the skill and the course which the user completed", tags={"User Information"},
      * @OA\RequestBody(
      *      @OA\MediaType(
      *          mediaType="json",
@@ -58,7 +58,9 @@ class UserInfo{
     }
 
     /**
-     * @OA\Delete(path="/REST_API_USER_INFO/api/delete.php?course={course}&skill={skill}", tags={"User Information"},
+     * @OA\Delete(path="/REST_API_USER_INFO/api/delete.php?course={course}&skill={skill}",
+     * summary="Once a course it's deleted from the database we also make sure to delete it from the user database",
+     *  tags={"User Information"},
      *  @OA\Parameter(
      *         description="Title of the course",
      *         in="path",
@@ -103,7 +105,9 @@ class UserInfo{
     }
 
     /**
-     * @OA\Get(path="/REST_API_USER_INFO/api/getCoursesBySkill.php?id={id}&skill={skill}", tags={"User Information"},
+     * @OA\Get(path="/REST_API_USER_INFO/api/getCoursesBySkill.php?id={id}&skill={skill}", 
+     * summary="Returns all the courses a user has taken from a given skill",
+     * tags={"User Information"},
      *  @OA\Parameter(
      *         description="Id of a user",
      *         in="path",
@@ -146,7 +150,9 @@ class UserInfo{
     }
 
     /**
-     * @OA\Get(path="/REST_API_USER_INFO/api/getNoCourses.php?id={id}&skill={skill}", tags={"User Information"},
+     * @OA\Get(path="/REST_API_USER_INFO/api/getNoCourses.php?id={id}&skill={skill}",
+     * summary="Returns the number of courses a user has taken from a given skill",
+     *  tags={"User Information"},
      *  @OA\Parameter(
      *         description="Id of a user",
      *         in="path",

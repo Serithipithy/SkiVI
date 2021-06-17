@@ -17,7 +17,7 @@ class FirstAid{
     }
 
     /**
-     * @OA\Post(path="/REST_API_FA/api/post.php", tags={"First Aid"},
+     * @OA\Post(path="/REST_API_FA/api/post.php",summary="Adds a course to the database", tags={"First Aid"},
      * @OA\RequestBody(
      *      @OA\MediaType(
      *          mediaType="json",
@@ -61,7 +61,7 @@ class FirstAid{
     }
 
     /**
-     * @OA\Put(path="/REST_API_FA/api/put.php", tags={"First Aid"},
+     * @OA\Put(path="/REST_API_FA/api/put.php", summary="Updates the link or the text of a course" ,tags={"First Aid"},
      * @OA\RequestBody(
      *      @OA\MediaType(
      *          mediaType="json",
@@ -103,7 +103,7 @@ class FirstAid{
     }
 
     /**
-     * @OA\Get(path="/REST_API_FA/api/get.php", tags={"First Aid"},
+     * @OA\Get(path="/REST_API_FA/api/get.php", summary="Returns all the courses" ,tags={"First Aid"},
      * @OA\Response (response="200", description="Succes"),
      * @OA\Response (response="404", description="Not Found")
      * )
@@ -123,7 +123,7 @@ class FirstAid{
     }
 
     /**
-     * @OA\Get(path="/REST_API_FA/api/get_single.php?title={title}", tags={"First Aid"},
+     * @OA\Get(path="/REST_API_FA/api/get_single.php?title={title}", summary="Returns the course with the given title",tags={"First Aid"},
      * @OA\Parameter(
      *         description="Title of a course",
      *         in="path",
@@ -156,7 +156,7 @@ class FirstAid{
     }
 
     /**
-     * @OA\Delete(path="/REST_API_FA/api/delete.php?title={title}", tags={"First Aid"},
+     * @OA\Delete(path="/REST_API_FA/api/delete.php?title={title}",summary="Deletes a course", tags={"First Aid"},
      *  @OA\Parameter(
      *         description="Title of the course",
      *         in="path",
