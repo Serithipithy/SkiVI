@@ -1,4 +1,4 @@
-#User Guide
+ # User Guide
 
 For the application to run localy from your computer you need to install [Xampp](https://www.apachefriends.org/ro/download.html) and clone this
  [repository](https://github.com/Serithipithy/SkiVI-Skill-Virtual-Instructor-),all of the files. 
