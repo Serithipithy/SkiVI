@@ -74,28 +74,26 @@ header("Cache-Control: max-age=2592000");
             </div>
             <div class="skills">
                 <div class="skill">
-                    <a href="<?php echo URLROOT;?>/skills/first_aid"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="First Aid image"></a>
-                    <h2>Titlu</h2>
+                    <a href="<?php echo URLROOT;?>/skills/first_aid"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/skill1.jpg" alt="First Aid image"></a>
+                    <h2>First Aid</h2>
                     <p class="skill--info">
                     First aid is the first and immediate assistance given to any person suffering from either a minor or serious illness or injury, with care provided to preserve life, prevent the condition from worsening, or to promote recovery. ... First aid is generally performed by someone with basic medical training.
                     </p>
                     <a href="<?php echo URLROOT;?>/skills/first_aid" class="buttons--skill">Start learning</a>
                 </div>
                 <div class="skill">
-                <a href="<?php echo URLROOT;?>/skills/origami"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="Origami image"></a>
-                    <h2>Titlu</h2>
+                <a href="<?php echo URLROOT;?>/skills/origami"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/skill2.jpg" alt="Origami image"></a>
+                    <h2>Origami</h2>
                     <p class="skill--info">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Origami is the art of paper-folding. Its name derives from Japanese words ori (“folding”) and kami (“paper”). Traditional origami consists of folding a single sheet of square paper (often with a colored side) into a sculpture without cutting, gluing, taping, or even marking it.
                     </p>
                     <a href="<?php echo URLROOT;?>/skills/origami" class="buttons--skill">Start learning</a>
                 </div>
                 <div class="skill">
-                <a href="<?php echo URLROOT;?>/skills/sign_language"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="Sign Language image"></a>
-                    <h2>Titlu</h2>
+                <a href="<?php echo URLROOT;?>/skills/sign_language"> <img class="skill--image" src="<?php echo STYLEROOT;?>/assets/img/skill3.png" alt="Sign Language image"></a>
+                    <h2>Sign Language</h2>
                     <p class="skill--info">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Sign languages (also known as signed languages) are languages that use the visual-manual modality to convey meaning. Sign languages are expressed through manual articulations in combination with non-manual elements.
                     </p>
                     <a href="<?php echo URLROOT;?>/skills/sign_language" class="buttons--skill">Start learning</a>
                 </div>

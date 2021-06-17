@@ -57,12 +57,12 @@ header("Cache-Control: max-age=2592000");
     <main>
         <a href="#" class="to-top">Back to top</a>
         <div class="title">
-            <h1>Title</h1>
+            <h1>First Aid</h1>
         </div>
         <div class="course--details">
 
             <div class="course--description--image">
-                <img class="course--img" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="man reading">
+                <img class="course--img" src="<?php echo STYLEROOT;?>/assets/img/skill1.jpg" alt="man reading">
                 <div class="course--description">
                     <h2>Course Description</h2>
                     <p>

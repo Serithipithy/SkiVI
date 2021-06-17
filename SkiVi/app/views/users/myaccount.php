@@ -135,7 +135,7 @@ header("Cache-Control: max-age=2592000");
                         </a>
                     </div>
                 </div>
-                <img src="<?php echo STYLEROOT;?>/assets/img/skill3.jpg" alt="skill 1 imagine" class="skill--image" />
+                <img src="<?php echo STYLEROOT;?>/assets/img/skill3.png" alt="skill 1 imagine" class="skill--image" />
             </div>
 
         </section>

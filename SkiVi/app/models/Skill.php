@@ -22,8 +22,6 @@ class Skill{
             $content_array=array();
         
             foreach($response['data'] as $values){
-                //Print the element out.
-                //echo $values['title'], '<br>';
 
                 array_push($content_array,array($values['title'],$values['link'],$values['text']));
             }

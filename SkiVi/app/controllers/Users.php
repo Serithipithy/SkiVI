@@ -259,9 +259,14 @@ class Users extends Controller{
         $nr_Origami=count($content_Origami);
         $nr_SignLng=count($content_SignLng);
 
-        $data['progress-firstAid']=intVal(($this->userModel->getCount($_SESSION['user_id'],'first_aid')*100)/$nr_FA);
-        $data['progress-origami']=intVal(($this->userModel->getCount($_SESSION['user_id'],'origami')*100)/$nr_Origami);
-        $data['progress-signLanguage']=intVal(($this->userModel->getCount($_SESSION['user_id'],'sign_lng')*100)/$nr_SignLng);
+        if($nr_FA == 0) {$data['progress-firstAid']= 0;}
+        else {$data['progress-firstAid']=intVal(($this->userModel->getCount($_SESSION['user_id'],'first_aid')*100)/$nr_FA);}
+
+        if($nr_Origami == 0) {$data['progress-origami']= 0;}
+        else{$data['progress-origami']=intVal(($this->userModel->getCount($_SESSION['user_id'],'origami')*100)/$nr_Origami);}
+
+        if($nr_SignLng == 0) {$data['progress-signLanguage']= 0;}
+        else {$data['progress-signLanguage']=intVal(($this->userModel->getCount($_SESSION['user_id'],'sign_lng')*100)/$nr_SignLng);}
 
         return $data;
     }

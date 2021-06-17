@@ -57,17 +57,16 @@ header("Cache-Control: max-age=2592000");
     <main>
         <a href="#" class="to-top">Back to top</a>
         <div class="title">
-            <h1>Title</h1>
+            <h1>Origami</h1>
         </div>
         <div class="course--details">
 
             <div class="course--description--image">
-                <img class="course--img" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="man reading">
+                <img class="course--img" src="<?php echo STYLEROOT;?>/assets/img/skill2.jpg" alt="man reading">
                 <div class="course--description">
                     <h2>Course Description</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Origami is the art of paper-folding. Its name derives from Japanese words ori (“folding”) and kami (“paper”). Traditional origami consists of folding a single sheet of square paper (often with a colored side) into a sculpture without cutting, gluing, taping, or even marking it.
                     </p>
                 </div>
             </div>

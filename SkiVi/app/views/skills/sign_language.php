@@ -57,17 +57,16 @@ header("Cache-Control: max-age=2592000");
     <main>
         <a href="#" class="to-top">Back to top</a>
         <div class="title">
-            <h1>Title</h1>
+            <h1>Sign Language</h1>
         </div>
         <div class="course--details">
 
             <div class="course--description--image">
-                <img class="course--img" src="<?php echo STYLEROOT;?>/assets/img/Layer.jpg" alt="man reading">
+                <img class="course--img" src="<?php echo STYLEROOT;?>/assets/img/skill3.png" alt="man reading">
                 <div class="course--description">
                     <h2>Course Description</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Sign languages (also known as signed languages) are languages that use the visual-manual modality to convey meaning. Sign languages are expressed through manual articulations in combination with non-manual elements. Sign languages are full-fledged natural languages with their own grammar and lexicon.[1] Sign languages are not universal and they are not mutually intelligible with each other,[2] although there are also striking similarities among sign languages.
                     </p>
                 </div>
             </div>
