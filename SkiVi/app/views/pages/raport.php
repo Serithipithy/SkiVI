@@ -276,6 +276,26 @@
         </section>
         <section>
         <h2 id="7">7 WEB.DEV Scores</h2>
+        <div class="scores">
+            <p>Index Page</p>
+            <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/index.png" alt="score">
+            <p>Login</p>
+            <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/login.png" alt="score">
+            <p>Sign up</p>
+            <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/signup.png" alt="score">
+            <p>My account</p>
+            <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/myaccount.png" alt="score">
+            <p>Manage</p>
+            <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/manage.png" alt="score">
+            <p>Add course</p>
+            <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/add.png" alt="score">
+            <p>Delete course</p>
+            <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/delete.png" alt="score">
+            <p>Update course</p>
+            <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/update.png" alt="score">
+            <p>Skill x3</p>
+            <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/skill.png" alt="score">
+        </div>
         <p>todo</p>
       </section>
         <section>
