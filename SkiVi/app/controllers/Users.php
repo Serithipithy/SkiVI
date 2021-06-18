@@ -35,7 +35,9 @@ class Users extends Controller{
             if( empty($data['username']) ){
                 $data['usernameError'] = 'Please enter username.';
             } elseif (!preg_match($nameValidation,$data['username'])){
-                $data['usernameError'] = 'Username cand only contain letters and numbers.';
+                $data['usernameError'] = 'Username can only contain letters and numbers.';
+            } elseif($this->userModel->userExists($data['username'])){
+                $data['usernameError'] = 'Username already exists.';
             }
 
             //Validate email

@@ -296,7 +296,6 @@
             <p>Skill x3</p>
             <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/skill.png" alt="score">
         </div>
-        <p>todo</p>
       </section>
         <section>
             <h2 id="8">8 Technologies</h2>

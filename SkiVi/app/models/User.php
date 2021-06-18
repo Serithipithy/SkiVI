@@ -53,9 +53,35 @@
 
             //Email param will be binded with the wmail varaible
             $this->db->bind(':email',$email);
+            $this->db->execute();
+            $row = $this->db->rowCount();
+            echo $this->db->rowCount();
+            // if(!is_null($row->user_email))
+            //     $user=$row->user_email;
 
             // Check if email is already registered
-            if($this->db->rowCount() > 0){
+            if(intVal($row) > 0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function userExists($username){
+            //Prepared statement
+            $this->db->query('SELECT * FROM users WHERE user_name = :username');
+
+            //Email param will be binded with the wmail varaible
+            $this->db->bind(':username',$username);
+
+            //get the row
+            $this->db->execute();
+            $row = $this->db->rowCount();
+            // if(!is_null($row->user_name))
+            //     $user=$row->user_name;
+
+            // Check if email is already registered
+            if(intVal($row) > 0){
                 return true;
             } else {
                 return false;
