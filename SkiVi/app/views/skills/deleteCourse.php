@@ -20,11 +20,16 @@
             <ul>
                 <li><a href="#contact" class="contact--button">Contact</a></li>
             </ul>
-            <div><img class="logo" src="<?php echo STYLEROOT;?>/assets/img/logo.png" alt="logo"></div>
+            <!-- <div><img class="logo" src="<?php echo STYLEROOT;?>/assets/img/logo.png" alt="logo"></div> -->
             <div class="openMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
                 <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
                 <li><a href="<?php echo URLROOT;?>/users/myaccount">My Account</a></li>
+                <li>
+                <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'yes') : ?>
+                    <a href="<?php echo URLROOT;?>/skills/manage">Manage</a>
+                <?php endif; ?>
+                </li>
                 <li>
                     <?php if(!isset($_SESSION['user_id'])) : ?>
                     <a href="<?php echo URLROOT;?>/users/signup">Sign Up</a>

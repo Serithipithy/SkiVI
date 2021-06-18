@@ -26,7 +26,7 @@ header("Cache-Control: max-age=2592000");
             <ul>
                 <li><a href="#contact" class="contact--button">Contact</a></li>
             </ul>
-            <div><img class="logo" src="<?php echo STYLEROOT;?>/assets/img/logo.png" alt="logo"></div>
+            <!-- <div><img class="logo" src="<?php echo STYLEROOT;?>/assets/img/logo.png" alt="logo"></div> -->
             <div class="openMenu"><img class="hamburger--menu" src="<?php echo STYLEROOT;?>/assets/img/menu.png" alt="menu button"></div>
             <ul class="mainMenu">
                 <li><a href="<?php echo URLROOT;?>/pages/index">Learn</a></li>
@@ -61,7 +61,7 @@ header("Cache-Control: max-age=2592000");
     <main>
         <a href="#" class="to-top">Back to top</a>
         <div class="image--slides">
-            <img class="image-in-slide" src="<?php echo STYLEROOT;?>/assets/img/bg-image3.jpg" alt="a man reading a book">
+            <img class="image-in-slide" src="<?php echo STYLEROOT;?>/assets/img/bg-image3.jpg" alt="background image">
             <div class="over--image--slides">
                 <a href="#learning--plans" class="button--middle">Get Started!</a>
             </div>
