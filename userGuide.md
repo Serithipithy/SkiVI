@@ -19,6 +19,6 @@ If you have a password to this databases you need to go in each 'Database.php' f
 
 You will find the 'Database.php' files in the following directories: 'SkiVi/app/libraries','REST_API_FA/config','REST_API_ORIGAMI/config','REST_API_SIGN_LNG/config' and'REST_API_USER_INFO/config'.
 
-Check our video presentation [here] (https://www.youtube.com/watch?v=d3jXi67qESo).
+Check our video presentation [here](https://www.youtube.com/watch?v=d3jXi67qESo).
 
 Now access this so you can enjoy the SkiVi experience ->[Click here](http://localhost:8000/SkiVi/pages/index)
