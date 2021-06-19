@@ -6,4 +6,6 @@ Fiecare deprindere va fi implementata de un microserviciu Web independent ce va 
 
 Functionalitatile de baza ale sistemului (gestiunea instructajelor, utilizatorii interesati de invatarea unor deprinderi etc.) vor fi oferite via un API adoptand paradigma REST sau GraphQL.
 
+Check our video presentation [here](https://www.youtube.com/watch?v=d3jXi67qESo).
+
 For the User Guide [Click here](https://github.com/Serithipithy/SkiVI-Skill-Virtual-Instructor-/blob/main/userGuide.md).
