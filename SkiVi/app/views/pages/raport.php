@@ -68,6 +68,7 @@
                 <li><a href="#8">Technologies</a></li>
                 <li><a href="#9">Features</a></li>
                 <li><a href="#10">Working with GIT</a></li>
+                <li><a href="#11">Links</a></li>
             </ol>
         </section>
         <section typeof="sa:ReferenceList">
@@ -138,7 +139,7 @@
                   </div>
         </section>
         <section>
-            <h2 id="2">2 Overall Description</h2>
+            <h2 id="2">2. Overall Description</h2>
             <h3>2.1 Product Perspective</h3>
 
             <p>SkiVi is a modular web application which acts like a virtual instructor and provides different
@@ -187,7 +188,7 @@
             your favourite web browser.</p>
         </section>
         <section>
-            <h2 id="3">3 External Interface Requirements</h2>
+            <h2 id="3">3. External Interface Requirements</h2>
             <h3>3.1 User Interfaces</h3>
             <p>
             The interface for this application provides support for big screens and mobile screens based on
@@ -206,13 +207,9 @@
               accessed. It provides a clean way to display the user interface,
               Operation System integration is done via the web browser.
             </p>
-            <h3>3.4 Communications Interfaces</h3>
-            <p>
-                todo
-            </p>
         </section>
         <section>
-            <h2 id="4">4 System Features</h2>
+            <h2 id="4">4. System Features</h2>
             <h3>4.1 User Customization</h3>
             <p>
                 The user can customize it's profile by changing it's profile picture,
@@ -235,7 +232,7 @@
             </p>
         </section>
         <section>
-        <h2 id="5">5 Other Nonfunctional Requirements</h2>
+        <h2 id="5">5. Other Nonfunctional Requirements</h2>
         <h3>5.1 Performance Requirements</h3>
         <p>
             The website should load fast and be responsive on both desktop and
@@ -245,12 +242,8 @@
         <h3>5.2 Safety Requirements</h3>
         <p>
             It is required that the database to be protected from SQL injections.
-            Since the database management system used(MySQL) is not a plain
-            text execute and every operation happens because of a driver that
-            talks to the server, the possibility of a SQL injection is very very
-            small.
-
-            de modificat
+            Since we used prepared statements and parameterized queries,the SQL statements that are sent to and parsed by the database server separately from any parameters. 
+            This way we prevent attackers to inject malicious SQL.
         </p>
         <h3>5.3 Security Requirements</h3>
         <p>
@@ -271,11 +264,11 @@
         </p>
         </section>
         <section>
-            <h2 id="6">6 UML DIAGRAM</h2>
+            <h2 id="6">6. UML DIAGRAM</h2>
             <p><img class="diagram" src="<?php echo STYLEROOT;?>/assets/img/umlDiagram.jpg" alt="umlDiagram"> </p>
         </section>
         <section>
-        <h2 id="7">7 WEB.DEV Scores</h2>
+        <h2 id="7">7. WEB.DEV Scores</h2>
         <div class="scores">
             <p>Index Page</p>
             <img class="score" src="<?php echo STYLEROOT;?>/assets/scores/index.png" alt="score">
@@ -298,7 +291,7 @@
         </div>
       </section>
         <section>
-            <h2 id="8">8 Technologies</h2>
+            <h2 id="8">8. Technologies</h2>
             <h3>8.1 Microservices</h3>
             <p>
                 The skills are developed using microservices,for each skill we have a different database
@@ -330,7 +323,7 @@
             <p>We also documented our code using <a href="https://swagger.io/" target="_blank">Swagger</a> to have a good way to interact and understand how to integrate the API's with other services.</p>
         </section>
         <section>
-            <h2 id="9">9 Features</h2>
+            <h2 id="9">9. Features</h2>
             <h3>9.1 Register</h3>
             <p>
                 When an user want to create an account in our website, he will need to complete the following fields:
@@ -361,7 +354,7 @@
             
         </section>
         <section>
-            <h2 id="10">10 Working with GIT</h2>
+            <h2 id="10">10. Working with GIT</h2>
             <p>
             We used <a href="https://github.com" target="_blank">GitHub</a> and
             <a href="https://discord.com" target="_blank">Discord</a> to organize
@@ -375,10 +368,21 @@
                 helped us organize our code and fix our mistakes. 
             </p>
         </section>
+        <section>
+        <h2 id="11">11. Links</h2>
+        <ul>
+        <li>
+        <a href="https://www.youtube.com/watch?v=d3jXi67qESo">Video Presentation</a>
+        </li>
+        <li>
+        <a href="https://github.com/Serithipithy/SkiVI-Skill-Virtual-Instructor-/blob/main/userGuide.md">User Guide</a>
+        </li>
+        <li>
+        <a href="<?php echo STYLEROOT;?>/pages/index">GO TO OUR MAIN PAGE</a>
+        </li>
+        </ul>
+        </section>
     </article>
-   <p>
-   <a href="<?php echo STYLEROOT;?>/pages/index">GO TO OUR MAIN PAGE</a>
-   </p>
 </body>
 
 </html>
