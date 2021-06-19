@@ -55,7 +55,6 @@
             $this->db->bind(':email',$email);
             $this->db->execute();
             $row = $this->db->rowCount();
-            echo $this->db->rowCount();
             // if(!is_null($row->user_email))
             //     $user=$row->user_email;
 

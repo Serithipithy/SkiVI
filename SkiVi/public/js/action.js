@@ -7,14 +7,7 @@ $(document).ready(function() {
         var string = $("#link").val();
         var text = $("#text").val();
         var link = string.replace(/"/g, "'");
-        console.log(link);
         var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
-        // if (link !== null) {
-        //     var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
-        // } else {
-        //     link = "";
-        //     var sendMessage = '{ "title":"' + title + '", "link": "' + link + '", "text":"' + text + '" }';
-        // }
         var obj = JSON.parse(JSON.stringify(sendMessage));
 
         if (skillname.localeCompare("skill1") == 0) {

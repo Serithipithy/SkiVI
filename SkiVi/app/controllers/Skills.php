@@ -41,25 +41,25 @@ class Skills extends Controller
     }
 
     public function addCourse(){
-        if(!$_SESSION['admin'] == 'yes'){
+        if($_SESSION['admin'] === 'no'){
             header('location:' . URLROOT . '/pages/restrictPage');
         } 
         else $this->view('skills/addCourse');
     }
     public function manage(){
-        if(!$_SESSION['admin'] == 'yes'){
+        if($_SESSION['admin'] == 'no'){
             header('location:' . URLROOT . '/pages/restrictPage');
         }
         else $this->view('skills/manage');
     }
     public function updateCourse(){
-        if(!$_SESSION['admin'] == 'yes'){
+        if($_SESSION['admin'] == 'no'){
             header('location:' . URLROOT . '/pages/restrictPage');
         }
         else $this->view('skills/updateCourse');
     }
     public function deleteCourse(){
-        if(!$_SESSION['admin'] == 'yes'){
+        if($_SESSION['admin'] == 'no'){
             header('location:' . URLROOT . '/pages/restrictPage');
         }
         else $this->view('skills/deleteCourse');
